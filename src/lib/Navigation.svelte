@@ -7,7 +7,7 @@
 <style lang="scss">
   nav {
     height: 50px;
-    background-color: #383838;
+    background-color: var(--primary-color);
     display: flex;
   }
 
@@ -20,7 +20,7 @@
 
   .home-link {
     text-transform: uppercase;
-    color: #737373;
+    color: var(--secondary-color);
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 600;

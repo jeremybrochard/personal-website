@@ -21,10 +21,20 @@
         </svg>
       </a>
     </p>
+    <a class="navigate-down" href="#work-references">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" role="img" aria-label="Aller à la section suivante">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </a>
   </div>
 </section>
 
 <style lang="scss">
+  %icon {
+    margin: 0 4px;
+    width: 1.3rem;
+  }
+
   section {
     background-color: var(--primary-color);
     color: #fff;
@@ -33,7 +43,7 @@
 
   .container {
     margin: auto;
-    padding: 7rem var(--container-padding);
+    padding: 7rem var(--container-padding) 0 var(--container-padding);
     max-width: var(--container-max-width);
     display: flex;
     align-items: center;
@@ -63,13 +73,12 @@
       line-height: 1.5rem;
     }
 
-    p.social-medias {
+    .social-medias {
       display: flex;
       padding-top: 16px;
 
       a {
-        margin: 0 4px;
-        width: 1.3rem;
+        @extend %icon;
       }
     }
   }
@@ -81,6 +90,12 @@
     &:hover {
       text-decoration: underline;
       filter: grayscale(0.7);
+    }
+
+    &.navigate-down {
+      @extend %icon;
+      margin-top: 6rem;
+      margin-bottom: 3rem;
     }
   }
 </style>

@@ -1,6 +1,16 @@
-<script>
+<script lang="ts">
   import LinkedInIcon from "$lib/assets/social-media-icons/linkedin.svg"
   import GithubIcon from "$lib/assets/social-media-icons/github.svg"
+
+  function smoothAnchorClick (event: MouseEvent & {currentTarget: (EventTarget & HTMLAnchorElement)}) {
+    event.preventDefault();
+    const anchor = document.getElementById("work-references");
+    if (!anchor) return;
+    window.scrollTo({
+      top: anchor.offsetTop,
+      behavior: 'smooth'
+    })
+  }
 </script>
 
 <section>
@@ -24,7 +34,7 @@
         </svg>
       </a>
     </p>
-    <a class="navigate-down" href="#work-references">
+    <a class="navigate-down" href="#work-references" on:click={smoothAnchorClick}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" role="img" aria-label="Aller à la section suivante">
         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
       </svg>

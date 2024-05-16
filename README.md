@@ -1,17 +1,15 @@
-# create-svelte
+# celineung-website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This website is developped using Svelte framework.
+https://celineung.com
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Start in local
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+npm run dev
 
-# create a new project in my-app
-npm create svelte@latest my-app
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
 ## Developing

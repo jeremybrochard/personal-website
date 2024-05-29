@@ -1,6 +1,7 @@
 <script lang="ts">
 	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
 	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
+	import OutboundLink from './OutboundLink.svelte';
 
 	function smoothAnchorClick(
 		event: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }
@@ -23,45 +24,27 @@
 		<p class="leading-6 text-center my-4">
 			Depuis 2015, j’accompagne mes clients dans la réalisation de leurs projets web. J'ai récemment
 			rejoint
-			<a
-				class="no-underline text-secondary hover:underline hover:grayscale-70"
-				href="https://aycandoo.fr/"
-				target="_blank"
-				rel="noopener noreferrer"
-				id="aycandoo">AYCANDO</a
-			>.
+			<OutboundLink href="https://aycandoo.fr/" id="aycandoo">AYCANDO</OutboundLink>.
 		</p>
 		<p class="leading-6 text-center my-4">
 			Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi
-			bien dans sa réalisation que sa maintenance.<br /><a
-				href="https://aycandoo.fr/contact/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="no-underline text-secondary my-0 mx-1 w-5 hover:underline hover:grayscale-70 cu-contact"
-				>Prenez contact avec notre équipe AYCANDOO</a
-			>.
+			bien dans sa réalisation que sa maintenance.<br />
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 cu-contact">
+				Prenez contact avec notre équipe AYCANDOO
+			</OutboundLink>.
 		</p>
 		<p class="flex pt-4 my-4">
-			<a
-				class="no-underline text-secondary my-0 mx-1 w-5 hover:underline hover:grayscale-70"
+			<OutboundLink
 				href="https://www.linkedin.com/in/celine-ung"
-				target="_blank"
-				rel="noopener noreferrer"
-				id="cu-linkedin"><img src={LinkedInIcon} alt="Profile LinkedIn de Céline" /></a
+				id="cu-linkedin"
+				class="my-0 mx-1 w-5"
 			>
-			<a
-				class="no-underline text-secondary my-0 mx-1 w-5 hover:underline hover:grayscale-70"
-				href="https://github.com/celineung"
-				target="_blank"
-				rel="noopener noreferrer"
-				id="cu-github"><img src={GithubIcon} alt="Profile Github de Céline" /></a
-			>
-			<a
-				class="no-underline text-secondary my-0 mx-1 w-5 hover:underline hover:grayscale-70 cu-contact"
-				href="https://aycandoo.fr/contact/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
+				<img src={LinkedInIcon} alt="Profile LinkedIn de Céline" />
+			</OutboundLink>
+			<OutboundLink href="https://github.com/celineung" id="cu-github" class="my-0 mx-1 w-5">
+				<img src={GithubIcon} alt="Profile Github de Céline" />
+			</OutboundLink>
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 w-5 cu-contact">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -78,7 +61,7 @@
 						d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
 					/>
 				</svg>
-			</a>
+			</OutboundLink>
 		</p>
 		<a
 			class="no-underline text-secondary hover:underline hover:grayscale-70 mx-1 mt-8 mb-12 md:mt-24 w-5"

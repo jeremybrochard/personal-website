@@ -19,12 +19,14 @@
 <section class="bg-primary m-auto text-white">
 	<div class="flex flex-col items-center m-auto pt-8 pb-0 px-6 max-w-6xl md:pt-28">
 		<div>Hello, je suis</div>
-		<h1 class="my-1 mx-0 text-secondary text-2xl font-semibold">Céline Ung</h1>
-		<h2 class="my-8 mx-0 text-center text-4xl font-semibold">Développeuse web fullstack</h2>
+		<h1 class="my-1 mx-0 text-secondary text-2xl font-semibold">Jérémy Brochard</h1>
+		<h2 class="my-8 mx-0 text-center text-4xl font-semibold">Développeur Angular / JS / Full stack</h2>
 		<p class="leading-6 text-center my-4">
-			Depuis 2015, j’accompagne mes clients dans la réalisation de leurs projets web. J'ai récemment
-			rejoint
-			<OutboundLink href="https://aycandoo.fr/" id="aycandoo">AYCANDO</OutboundLink>.
+			Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société
+			Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant <OutboundLink
+				href="https://aycandoo.fr/"
+				id="aycandoo">AYCANDO</OutboundLink
+			>, ma propre société.
 		</p>
 		<p class="leading-6 text-center my-4">
 			Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi

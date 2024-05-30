@@ -1,102 +1,58 @@
 <script lang="ts">
-	import ZenikaImg from '$lib/assets/work-references/zenika.svg';
-	import CisionImg from '$lib/assets/work-references/cision.svg';
-	import BnpImg from '$lib/assets/work-references/bnpparibas.png';
-	import JcdecauxImg from '$lib/assets/work-references/jcdecaux.svg';
-	import PixImg from '$lib/assets/work-references/pix.svg';
-	import InvivoImg from '$lib/assets/work-references/invivo.png';
-	import ImmersionFaciliteeImg from '$lib/assets/work-references/immersion-facilitee.svg';
-	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
+	import ColonnaFacilityImg from '$lib/assets/work-references/colonna-facility.png';
+	import LexisNexisImg from '$lib/assets/work-references/lexisnexis.svg';
+	import MinistereEducationNationaleImg from '$lib/assets/work-references/ministere-education-nationale-jeunesse.svg';
+	import ProximyImg from '$lib/assets/work-references/proximy.png';
+	import SedeVeoliaImg from '$lib/assets/work-references/sede-veolia.png';
+	import SGImg from '$lib/assets/work-references/sg.svg';
+	import VoluntisImg from '$lib/assets/work-references/voluntis.svg';
+	import OutboundLink from './OutboundLink.svelte';
 
 	type ReferenceName =
-		| 'zenika'
-		| 'cision'
-		| 'bnpparibas'
-		| 'jcdecaux'
-		| 'pix'
-		| 'invivo'
-		| 'immersion-facilitee';
+		| 'colonna-facility'
+		| 'lexisnexis'
+		| 'ministere-education-nationale-jeunesse'
+		| 'proximy'
+		| 'sede-veolia'
+		| 'sg'
+		| 'voluntis';
 	export let name: ReferenceName;
 
-	const referenceData: Record<
-		ReferenceName,
-		{ img: string; github: string | undefined; website: string | undefined }
-	> = {
-		zenika: {
-			img: ZenikaImg,
-			github: undefined,
-			website: undefined
+	const referenceData: Record<ReferenceName, { img: string; website: string | undefined }> = {
+		'colonna-facility': {
+			img: ColonnaFacilityImg,
+			website: 'https://play.google.com/store/apps/details?id=fr.cofacility.assure&hl=fr'
 		},
-		cision: {
-			img: CisionImg,
-			github: undefined,
-			website: 'https://luqi.fr/'
+		lexisnexis: {
+			img: LexisNexisImg,
+			website:
+				'https://www.lexisnexis.com/fr-fr/produits/solution-recherche-juridique-lexis-360-intelligence'
 		},
-		bnpparibas: {
-			img: BnpImg,
-			github: undefined,
-			website: undefined
+		'ministere-education-nationale-jeunesse': {
+			img: MinistereEducationNationaleImg,
+			website: 'https://www.education.gouv.fr/'
 		},
-		jcdecaux: {
-			img: JcdecauxImg,
-			github: undefined,
-			website: undefined
+		proximy: {
+			img: ProximyImg,
+			website: 'https://www.proximy.fr'
 		},
-		pix: {
-			img: PixImg,
-			github: 'https://github.com/1024pix/pix',
-			website: 'https://pix.fr/'
+		'sede-veolia': {
+			img: SedeVeoliaImg,
+			website: 'https://www.sede.veolia.com/fr'
 		},
-		invivo: {
-			img: InvivoImg,
-			website: 'https://www.aladin.farm/',
-			github: undefined
+		sg: {
+			img: SGImg,
+			website: 'https://info.sgmarkets.com/fr'
 		},
-		'immersion-facilitee': {
-			img: ImmersionFaciliteeImg,
-			github: 'https://github.com/gip-inclusion/immersion-facile',
-			website: 'https://immersion-facile.beta.gouv.fr/'
+		voluntis: {
+			img: VoluntisImg,
+			website: 'https://www.voluntis.com'
 		}
 	};
 </script>
 
 <div class="flex flex-col items-center justify-items-center w-1/2 md:w-1/3 h-36">
-	<img class="h-10 mb-2" src={referenceData[name].img} alt="Logo de {name}" />
-	<div class="flex">
-		{#if referenceData[name].website}
-			<a
-				class="text-secondary my-0 mx-1 w-6 hover:underline hover:grayscale-70"
-				href={referenceData[name].website}
-				target="_blank"
-				rel="noopener noreferrer"
-				id="{name}-website"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="1 1 21 21"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6"
-					role="img"
-					aria-label="Site auquel Céline a participé"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-					/>
-				</svg>
-			</a>
-		{/if}
-		{#if referenceData[name].github}
-			<a
-				class="text-secondary my-0 mx-1 w-6 hover:underline hover:grayscale-70"
-				href={referenceData[name].github}
-				target="_blank"
-				rel="noopener noreferrer"
-				id="{name}-github"><img src={GithubIcon} alt="Repository Github de {name}" /></a
-			>
-		{/if}
-	</div>
+	<OutboundLink href={referenceData[name].website} id="{name}-website">
+		<img class="h-10 mb-2" src={referenceData[name].img} alt="Logo de {name}" />
+	</OutboundLink>
 </div>

@@ -5,11 +5,11 @@ export default {
 		extend: {
 			colors: {
 				primary: '#383838',
-				secondary: '#ee7796'
+				secondary: '#8c77ee'
 			},
-      grayscale: {
-        70: '70%',
-      }
+			grayscale: {
+				70: '70%'
+			}
 		}
 	},
 	plugins: []

@@ -1,41 +1,21 @@
 <script lang="ts">
-  import ReferenceElement from "$lib/ReferenceElement.svelte";
+	import ReferenceElement from '$lib/ReferenceElement.svelte';
 </script>
 
-
-<section id="work-references">
-  <h1>Mes références</h1>
-  <p>Lorsqu'ils sont publics, les liens d'accès aux sites et bases de code des projets auxquels j'ai participé s'affichent sous les logos des sociétés.</p>
-  <div class="work-references_content">
-    <ReferenceElement name="zenika"/>
-    <ReferenceElement name="cision"/>
-    <ReferenceElement name="bnpparibas"/>
-    <ReferenceElement name="jcdecaux"/>
-    <ReferenceElement name="pix"/>
-    <ReferenceElement name="invivo"/>
-    <ReferenceElement name="immersion-facilitee"/>
-  </div>
+<section id="work-references" class="flex flex-col items-center m-auto py-24 px-6 max-w-6xl">
+	<h1 class="my-1 mx-0 text-2xl font-semibold">Mes références</h1>
+	<p class="text-center leading-6 mx-0 mt-4 mb-12">
+		Lorsqu'ils sont publics, les liens d'accès aux sites et applications auxquels j'ai participé
+		s'affichent sous les logos des sociétés. Le cas échéant, ces liens redirigent vers les sites
+		publiques.
+	</p>
+	<div class="flex flex-row flex-wrap">
+		<ReferenceElement name="lexisnexis" />
+		<ReferenceElement name="sg" />
+		<ReferenceElement name="sede-veolia" />
+		<ReferenceElement name="colonna-facility" />
+		<ReferenceElement name="proximy" />
+		<ReferenceElement name="ministere-education-nationale-jeunesse" />
+		<ReferenceElement name="voluntis" />
+	</div>
 </section>
-
-<style lang="scss">
-  section {
-    margin: auto;
-    padding: 6rem var(--container-padding);
-    max-width: var(--container-max-width);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  p {
-    text-align: center;
-    line-height: 1.5rem;
-    margin: 1rem 0 3rem 0;
-  }
-
-  .work-references_content {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-</style>

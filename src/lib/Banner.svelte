@@ -31,22 +31,22 @@
 		<p class="leading-6 text-center my-4">
 			Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi
 			bien dans sa réalisation que sa maintenance.<br />
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 cu-contact">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1">
 				Prenez contact avec notre équipe AYCANDOO
 			</OutboundLink>.
 		</p>
 		<p class="flex pt-4 my-4">
 			<OutboundLink
-				href="https://www.linkedin.com/in/celine-ung"
+				href="https://www.linkedin.com/in/jeremy-brochard"
 				id="cu-linkedin"
 				class="my-0 mx-1 w-5"
 			>
-				<img src={LinkedInIcon} alt="Profile LinkedIn de Céline" />
+				<img src={LinkedInIcon} alt="Profile LinkedIn de Jérémy" />
 			</OutboundLink>
-			<OutboundLink href="https://github.com/celineung" id="cu-github" class="my-0 mx-1 w-5">
-				<img src={GithubIcon} alt="Profile Github de Céline" />
+			<OutboundLink href="https://github.com/jeremybrochard/personal-website" class="my-0 mx-1 w-5">
+				<img src={GithubIcon} alt="Code source du site sur Github" />
 			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 w-5 cu-contact">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 w-5">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

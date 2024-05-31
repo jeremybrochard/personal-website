@@ -1,20 +1,30 @@
 <!doctype html>
 <html lang="fr">
-
 	<head>
 		<meta charset="utf-8" />
-    <title>Jérémy Brochard</title>
+		<title>Jérémy Brochard</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Développeur web fullstack, j'ai récemment décidé de me lancer en tant qu'indépendant en créant AYCANDOO, ma propre société. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance." />
-    <meta property="og:description" content="Développeur Angular / JS / Full stack" />
-    <meta property="og:title" content="Jérémy Brochard" />
-    <meta property="og:image" content="%sveltekit.assets%/favicon.png" />
+		<meta
+			name="description"
+			content="Développeur web fullstack, j'ai récemment décidé de me lancer en tant qu'indépendant en créant AYCANDOO, ma propre société. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance."
+		/>
+		<meta property="og:description" content="Développeur Angular / JS / Full stack" />
+		<meta property="og:title" content="Jérémy Brochard" />
+		<meta property="og:image" content="%sveltekit.assets%/favicon.png" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		%sveltekit.head%
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9P4HSSWE1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-S9P4HSSWE1');
+		</script>
 	</head>
 
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
-
 </html>

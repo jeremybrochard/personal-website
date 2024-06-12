@@ -1,0 +1,30 @@
+{
+	"pageTitle": "Jérémy Brochard",
+	"pageTitlePrefix": "Bonjour, je suis",
+  "seo": {
+    "description": "Développeur web fullstack, j'ai récemment décidé de me lancer en tant qu'indépendant en créant AYCANDOO, ma propre société. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
+    "ogDescription": "Développeur Angular / JS / Full stack"
+  },
+	"banner": {
+		"title": "Développeur Angular / JS / Full stack",
+		"mainBloc": {
+			"descriptionBegin": "Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant",
+			"aycandooLink": "AYCANDO",
+			"descriptionEnd": ", ma propre société."
+		},
+		"contactBloc": {
+			"description": "Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
+			"contactLink": "Prenez contact avec notre équipe AYCANDOO"
+		},
+		"actionsBloc": {
+			"linkedIn": "Profil LinkedIn de Jérémy",
+			"github": "Code source du site sur Github",
+			"contact": "Prise de contact via le formulaire de contact du site AYCANDOO",
+			"references": "Aller à la section des références"
+		}
+	},
+	"references": {
+		"title": "Mes références",
+		"description": "Lorsqu'ils sont publics, les liens d'accès aux sites et applications auxquels j'ai participé s'affichent sous les logos des sociétés. Le cas échéant, ces liens redirigent vers les sites publiques."
+	}
+}

@@ -1,6 +1,7 @@
 <script lang="ts">
-	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
 	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
+	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
+	import { _ } from 'svelte-i18n';
 	import OutboundLink from './OutboundLink.svelte';
 
 	function smoothAnchorClick(
@@ -18,21 +19,21 @@
 
 <section class="bg-primary m-auto text-white">
 	<div class="flex flex-col items-center m-auto pt-8 pb-0 px-6 max-w-6xl md:pt-28">
-		<div>Hello, je suis</div>
-		<h1 class="my-1 mx-0 text-secondary text-2xl font-semibold">Jérémy Brochard</h1>
-		<h2 class="my-8 mx-0 text-center text-4xl font-semibold">Développeur Angular / JS / Full stack</h2>
+		<div>{$_('pageTitlePrefix')}</div>
+		<h1 class="my-1 mx-0 text-secondary text-2xl font-semibold">{$_('pageTitle')}</h1>
+		<h2 class="my-8 mx-0 text-center text-4xl font-semibold">
+			{$_('banner.title')}
+		</h2>
 		<p class="leading-6 text-center my-4">
-			Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société
-			Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant <OutboundLink
-				href="https://aycandoo.fr/"
-				id="aycandoo">AYCANDO</OutboundLink
-			>, ma propre société.
+			{$_('banner.mainBloc.descriptionBegin')}
+			<OutboundLink href="https://aycandoo.fr/" id="aycandoo"
+				>{$_('banner.mainBloc.aycandooLink')}</OutboundLink
+			>{$_('banner.mainBloc.descriptionEnd')}
 		</p>
 		<p class="leading-6 text-center my-4">
-			Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi
-			bien dans sa réalisation que sa maintenance.<br />
+			{$_('banner.contactBloc.description')}<br />
 			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1">
-				Prenez contact avec notre équipe AYCANDOO
+				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
 		<p class="flex pt-4 my-4">
@@ -41,10 +42,10 @@
 				id="cu-linkedin"
 				class="my-0 mx-1 w-5"
 			>
-				<img src={LinkedInIcon} alt="Profile LinkedIn de Jérémy" />
+				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
 			</OutboundLink>
 			<OutboundLink href="https://github.com/jeremybrochard/personal-website" class="my-0 mx-1 w-5">
-				<img src={GithubIcon} alt="Code source du site sur Github" />
+				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
 			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 w-5">
 				<svg
@@ -55,7 +56,7 @@
 					stroke="currentColor"
 					class="w-6 h-6"
 					role="img"
-					aria-label="Prise de contact par mail"
+					aria-label={$_('banner.actionsBloc.contact')}
 				>
 					<path
 						stroke-linecap="round"
@@ -78,7 +79,7 @@
 				stroke="currentColor"
 				class="w-6 h-6"
 				role="img"
-				aria-label="Aller à la section suivante"
+				aria-label={$_('banner.actionsBloc.references')}
 			>
 				<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
 			</svg>

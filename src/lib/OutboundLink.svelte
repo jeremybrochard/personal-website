@@ -3,6 +3,8 @@
 
 	export let id: string | undefined = undefined;
 	export let href: string = '';
+	export let title: string | undefined = undefined;
+
 	let clazz: string = '';
 	export { clazz as class };
 </script>
@@ -13,6 +15,7 @@
 	target="_blank"
 	rel="noopener noreferrer"
 	{id}
+	{title}
 >
 	<slot />
 </a>

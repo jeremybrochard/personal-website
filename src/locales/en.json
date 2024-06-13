@@ -26,5 +26,11 @@
 	"references": {
 		"title": "My references",
 		"description": "When they are public, the access links to the sites and applications I have participated in are displayed under the companies' logos. If applicable, these links redirect to the public sites."
-	}
+	},
+  "credits": {
+    "flagIcons": {
+      "linkTitle": "Icones utilisées pour représenter les pays dans le selecteur de langue",
+      "linkLabel": "Icones de drapeaux par Freepik - Flaticon"
+    }
+  }
 }

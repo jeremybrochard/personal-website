@@ -6,10 +6,6 @@
 @tailwind utilities;
 
 body {
-	--container-padding: 1.5rem;
-	--container-max-width: 78rem;
-	--primary-color: #383838;
-	--secondary-color: #ee7796;
 	font-family: 'Ubuntu Sans', Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-style: normal;
 	color: rgba(0, 0, 0, 0.7);

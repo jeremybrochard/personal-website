@@ -32,5 +32,15 @@
       "linkTitle": "Icones utilisées pour représenter les pays dans le selecteur de langue",
       "linkLabel": "Icones de drapeaux par Freepik - Flaticon"
     }
-  }
+  },
+  "errors": {
+		"404": {
+			"title": "Page introuvable",
+			"description": "Oops ! La page que vous recherchez n'existe pas ou a été déplacé."
+		},
+		"unknown": {
+			"description": "Oops ! Une erreur inattendue s'est produite."
+		},
+		"goBack": "Retourner sur la page d'accueil"
+	}
 }

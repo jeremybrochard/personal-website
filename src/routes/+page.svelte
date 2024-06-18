@@ -1,6 +1,6 @@
 <script>
-	import Banner from '$lib/Banner.svelte';
-	import References from '$lib/References.svelte';
+	import Banner from '$lib/components/Banner.svelte';
+	import References from '$lib/components/References.svelte';
 </script>
 
 <Banner />

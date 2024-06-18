@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ReferenceElement from '$lib/ReferenceElement.svelte';
+  import ReferenceElement from './ReferenceElement.svelte';
   import { _ } from 'svelte-i18n';
 </script>
 

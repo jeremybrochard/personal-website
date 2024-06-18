@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Credits from '$lib/Credits.svelte';
-	import Navigation from '$lib/Navigation.svelte';
-	import Seo from '$lib/Seo.svelte';
-	import '../lib/i18n';
+	import Credits from '$lib/components/Credits.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import '$lib/i18n';
 	import './styles.css';
 </script>
 

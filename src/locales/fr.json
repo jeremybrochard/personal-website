@@ -27,6 +27,9 @@
 		"title": "Mes références",
 		"description": "Lorsqu'ils sont publics, les liens d'accès aux sites et applications auxquels j'ai participé s'affichent sous les logos des sociétés. Le cas échéant, ces liens redirigent vers les sites publiques."
 	},
+  "techStack": {
+    "title": "Ma stack technique"
+  },
   "credits": {
     "flagIcons": {
       "linkTitle": "Icones utilisées pour représenter les pays dans le selecteur de langue",

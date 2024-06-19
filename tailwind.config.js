@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				primary: '#383838',
+        primary_darker: '#121212',
 				secondary: '#8c77ee'
 			},
 			grayscale: {

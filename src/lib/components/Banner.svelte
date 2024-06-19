@@ -17,7 +17,7 @@
 	}
 </script>
 
-<section class="bg-primary text-white">
+<section class="bg-gradient-to-b from-primary_darker to-primary text-white">
 	<div class="stars"></div>
   <div class="stars2"></div>
   <div class="stars3"></div>

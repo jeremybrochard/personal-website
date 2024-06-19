@@ -52,7 +52,7 @@
 </script>
 
 <div
-	class="flex flex-col items-center justify-items-center w-full md:w-1/2 lg:w-1/3 h-36 transform duration-300 hover:scale-110"
+	class="flex flex-col items-center justify-items-center w-full h-28 md:h-36 md:w-1/2 lg:w-1/3 transform duration-300 hover:scale-110"
 >
 	<OutboundLink
 		href={referenceData[name].website}

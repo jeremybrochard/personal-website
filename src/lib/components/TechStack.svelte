@@ -8,10 +8,10 @@
 	<div class="flex flex-row flex-wrap mx-12 md:mx-24 lg:mx-48">
 		{#each techStackList as techStack}
 			<div
-				class="has-tooltip flex justify-center relative my-8 px-4 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 transform duration-300 hover:scale-110"
+				class="has-tooltip flex justify-center relative my-7 px-2 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 transform duration-300 hover:scale-110"
 			>
 				<span class="tooltip rounded shadow-lg p-1 bg-primary text-white">{techStack.name}</span>
-				<img class="h-16" src={techStack.image} alt={techStack.name} />
+				<img class="h-12" src={techStack.image} alt={techStack.name} />
 			</div>
 		{/each}
 	</div>

@@ -11,3 +11,9 @@ body {
 	color: rgba(0, 0, 0, 0.7);
 	margin: 0;
 }
+
+@layer utilities {
+	.text-gradient {
+		@apply bg-gradient-to-r from-[#5C44E4] via-[#8514F5] via-30% to-[#E90464] to-90% text-transparent bg-clip-text font-extrabold;
+	}
+}

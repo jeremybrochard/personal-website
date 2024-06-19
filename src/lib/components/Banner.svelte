@@ -11,40 +11,37 @@
 		const anchor = document.getElementById('work-references');
 		if (!anchor) return;
 		window.scrollTo({
-			top: anchor.offsetTop,
+			top: anchor.offsetTop + 60,
 			behavior: 'smooth'
 		});
 	}
 </script>
 
-<section class="bg-gradient-to-b from-primary_darker to-primary text-white">
+<section class="bg-gradient-to-b flex from-primary_darker to-primary to-60% text-white min-h-lvh md:min-h-0">
 	<div class="stars"></div>
-  <div class="stars2"></div>
-  <div class="stars3"></div>
-	<div
-		class="max-w-6xl mx-auto flex flex-col items-center pt-8 pb-0 px-6 md:pt-28"
-	>
+	<div class="stars2"></div>
+	<div class="stars3"></div>
+	<div class="max-w-6xl mx-auto flex self-center flex-col items-center pt-8 pb-0 px-6 md:pt-28">
 		<div>{$_('pageTitlePrefix')}</div>
-		<h1 class="my-1 mx-0 text-secondary text-2xl font-semibold">{$_('pageTitle')}</h1>
+		<h1 class="my-1 mx-0 text-gradient text-2xl">{$_('pageTitle')}</h1>
 		<h2 class="my-8 mx-0 text-center text-4xl font-semibold">
 			{$_('banner.title')}
 		</h2>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.mainBloc.descriptionBegin')}
-			<OutboundLink href="https://aycandoo.fr/" id="aycandoo"
+			<OutboundLink href="https://aycandoo.fr/" id="aycandoo" class="font-bold"
 				>{$_('banner.mainBloc.aycandooLink')}</OutboundLink
 			>{$_('banner.mainBloc.descriptionEnd')}
 		</p>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.contactBloc.description')}<br />
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 font-bold">
 				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
 		<p class="flex pt-4 my-4">
 			<OutboundLink
 				href="https://www.linkedin.com/in/jeremy-brochard"
-				id="cu-linkedin"
 				class="my-0 mx-1 w-5"
 			>
 				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
@@ -72,7 +69,7 @@
 			</OutboundLink>
 		</p>
 		<a
-			class="no-underline text-secondary hover:underline hover:grayscale-70 mx-1 mt-8 mb-12 md:mt-24 w-5"
+			class="no-underline text-secondary font-bold hover:underline hover:scale-110 mx-1 mt-8 mb-12 md:mt-24"
 			href="#work-references"
 			on:click={smoothAnchorClick}
 		>
@@ -82,7 +79,7 @@
 				viewBox="0 0 24 24"
 				stroke-width="1.5"
 				stroke="currentColor"
-				class="w-6 h-6"
+				class="w-8 h-8"
 				role="img"
 				aria-label={$_('banner.actionsBloc.references')}
 			>
@@ -124,7 +121,7 @@
 		}
 	}
 
-  .stars2 {
+	.stars2 {
 		width: 2px;
 		height: 2px;
 		background: transparent;
@@ -142,7 +139,7 @@
 		}
 	}
 
-  .stars3 {
+	.stars3 {
 		width: 3px;
 		height: 3px;
 		background: transparent;

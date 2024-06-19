@@ -51,8 +51,14 @@
 	};
 </script>
 
-<div class="flex flex-col items-center justify-items-center w-1/2 md:w-1/3 h-36">
-	<OutboundLink href={referenceData[name].website} id="{name}-website">
-		<img class="h-10 mb-2" src={referenceData[name].img} alt="Logo de {name}" />
+<div
+	class="flex flex-col items-center justify-items-center w-full md:w-1/2 lg:w-1/3 h-36 transform duration-300 hover:scale-110"
+>
+	<OutboundLink
+		href={referenceData[name].website}
+		id="{name}-website"
+		class="transform duration-300 focus-visible:scale-110"
+	>
+		<img class="h-11 mb-2" src={referenceData[name].img} alt="Logo de {name}" />
 	</OutboundLink>
 </div>

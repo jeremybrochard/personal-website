@@ -12,8 +12,6 @@ This repository contains the source code of the [Jeremy Brochard personal websit
 - Made with [Svelte](https://svelte.dev/)
 - Hosted on [Render](https://render.com/)
 
-The app is based on Celine Ung prior work: https://github.com/celineung/website.
-
 ## Start in local
 
 ```bash

@@ -3,7 +3,7 @@
   import { _ } from 'svelte-i18n';
 </script>
 
-<section id="work-references" class="flex flex-col items-center m-auto py-24 px-6 max-w-6xl">
+<section id="work-references" class="flex flex-col items-center m-auto pt-24 pb-12 px-6 max-w-6xl">
 	<h2 class="my-1 mx-0 text-2xl font-semibold">{$_('references.title')}</h2>
 	<p class="text-center leading-6 mx-0 mt-4 mb-12">
 		{$_('references.description')}

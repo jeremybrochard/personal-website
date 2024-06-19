@@ -16,7 +16,7 @@
 <div class="flex my-0 mx-4">
 	{#each countryFlags as country}
 		<button class="hover:ring-1 hover:ring-secondary" on:click={() => updateLocale(country.locale)}>
-			<img class="my-0 mx-1 w-5 block" src={country.image} alt={country.locale} />
+			<img class="my-0 mx-1 w-6 h-6 block" src={country.image} alt={country.locale} />
 		</button>
 	{/each}
 </div>

@@ -39,17 +39,17 @@
 				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
-		<p class="flex pt-4 my-4">
+		<p class="flex pt-4 my-4 gap-3">
 			<OutboundLink
 				href="https://www.linkedin.com/in/jeremy-brochard"
-				class="my-0 mx-1 w-5"
+				class="my-0 w-6"
 			>
 				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
 			</OutboundLink>
-			<OutboundLink href="https://github.com/jeremybrochard/personal-website" class="my-0 mx-1 w-5">
+			<OutboundLink href="https://github.com/jeremybrochard/personal-website" class="my-0 w-6">
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 w-5">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-6">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

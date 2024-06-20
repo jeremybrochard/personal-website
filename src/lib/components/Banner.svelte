@@ -50,7 +50,7 @@
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
 			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-7">
-				<img src={AycandooIcon} alt={$_('banner.actionsBloc.github')} />
+				<img src={AycandooIcon} alt={$_('banner.actionsBloc.contact')} />
 			</OutboundLink>
 			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-6">
 				<svg
@@ -61,7 +61,7 @@
 					stroke="currentColor"
 					class="w-6 h-6"
 					role="img"
-					aria-label={$_('banner.actionsBloc.contact')}
+					aria-label={$_('banner.actionsBloc.mailto')}
 				>
 					<path
 						stroke-linecap="round"

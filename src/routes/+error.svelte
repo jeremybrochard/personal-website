@@ -21,6 +21,6 @@
 
 <style lang="scss">
 	section {
-		min-height: calc(100vh - 6rem);
+		min-height: calc(100vh - 13rem);
 	}
 </style>

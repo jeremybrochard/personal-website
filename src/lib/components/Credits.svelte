@@ -1,6 +1,7 @@
 <script>
 	import OutboundLink from './OutboundLink.svelte';
 	import HeartIcon from '$lib/assets/heart-3-fill.svg';
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section class="flex flex-col w-full items-center gap-4 py-6">
@@ -10,10 +11,11 @@
 			class="font-bold">Svelte</OutboundLink
 		>
 	</p>
+	<p class="text-sm mb-4">&copy; {$_('credits.copyright')}</p>
 	<OutboundLink
 		class="text-primary text-xs"
 		href="https://www.flaticon.com/packs/rectangular-country-simple-flags"
-		title="country flag icons"
-		>Country flag icons by Freepik - Flaticon
+		title={$_('credits.flagIcons.linkTitle')}
+		>{$_('credits.flagIcons.linkLabel')}
 	</OutboundLink>
 </section>

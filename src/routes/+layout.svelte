@@ -15,6 +15,6 @@
 	<slot />
 </main>
 
-<footer class="flex items-center h-12">
+<footer class="flex items-center h-40">
 	<Credits />
 </footer>

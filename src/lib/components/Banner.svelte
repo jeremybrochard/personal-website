@@ -1,6 +1,7 @@
 <script lang="ts">
 	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
 	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
+	import AycandooIcon from '$lib/assets/aycandoo-color.svg';
 	import { _ } from 'svelte-i18n';
 	import OutboundLink from './OutboundLink.svelte';
 
@@ -17,7 +18,9 @@
 	}
 </script>
 
-<section class="bg-gradient-to-b flex from-primary_darker to-primary to-60% text-white min-h-lvh md:min-h-0">
+<section
+	class="bg-gradient-to-b flex from-primary_darker to-primary to-60% text-white min-h-lvh md:min-h-0"
+>
 	<div class="stars"></div>
 	<div class="stars2"></div>
 	<div class="stars3"></div>
@@ -39,17 +42,17 @@
 				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
-		<p class="flex pt-4 my-4 gap-3">
-			<OutboundLink
-				href="https://www.linkedin.com/in/jeremy-brochard"
-				class="my-0 w-6"
-			>
+		<p class="flex items-center pt-4 my-4 gap-3">
+			<OutboundLink href="https://www.linkedin.com/in/jeremy-brochard" class="my-0 w-6">
 				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
 			</OutboundLink>
-			<OutboundLink href="https://github.com/jeremybrochard/personal-website" class="my-0 w-6">
+			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-6">
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-6">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-7">
+				<img src={AycandooIcon} alt={$_('banner.actionsBloc.contact')} />
+			</OutboundLink>
+			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-6">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -58,7 +61,7 @@
 					stroke="currentColor"
 					class="w-6 h-6"
 					role="img"
-					aria-label={$_('banner.actionsBloc.contact')}
+					aria-label={$_('banner.actionsBloc.mailto')}
 				>
 					<path
 						stroke-linecap="round"

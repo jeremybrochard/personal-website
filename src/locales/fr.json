@@ -26,7 +26,7 @@
 	},
 	"references": {
 		"title": "Mes références",
-		"description": "Lorsqu'ils sont publics, les liens d'accès aux sites et applications auxquels j'ai participé s'affichent sous les logos des sociétés. Le cas échéant, ces liens redirigent vers les sites publiques."
+		"description": "Les logos ci-dessous redirigent vers les sites et applications auxquels j'ai participé lorsqu'ils sont publics. Le cas échéant, ces liens redirigent vers les sites publics."
 	},
   "techStack": {
     "title": "Ma stack technique"

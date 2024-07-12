@@ -93,70 +93,100 @@
 </section>
 
 <style lang="scss">
-	@function multiple-box-shadow($n) {
-		$value: '#{random(2000)}px #{random(2000)}px #FFF';
+	@mixin stars-generator($size, $shadows, $speed, $top) {
+		width: $size;
+		height: $size;
+		background: transparent;
+		box-shadow: $shadows;
+		animation: animStar $speed linear infinite;
+
+		&:after {
+			content: ' ';
+			position: absolute;
+			top: $top;
+			width: $size;
+			height: $size;
+			background: transparent;
+			box-shadow: $shadows;
+		}
+	}
+
+	@function multiple-box-shadow($n, $x, $y) {
+		$value: '#{random($x)}px #{random($y)}px #FFF';
 		@for $i from 2 through $n {
-			$value: '#{$value} , #{random(3000)}px #{random(1500)}px #FFF';
+			$value: '#{$value} , #{random($x)}px #{random($y)}px #FFF';
 		}
 
 		@return unquote($value);
 	}
 
-	$shadows-small: multiple-box-shadow(700);
-	$shadows-medium: multiple-box-shadow(200);
-	$shadows-big: multiple-box-shadow(100);
+	$shadows-small: multiple-box-shadow(300, 780, 1000);
+	$shadows-medium: multiple-box-shadow(80, 780, 1000);
+	$shadows-big: multiple-box-shadow(40, 780, 1000);
 
 	.stars {
-		width: 1px;
-		height: 1px;
-		background: transparent;
-		box-shadow: $shadows-small;
-		animation: animStar 50s linear infinite;
-
-		&:after {
-			content: ' ';
-			position: absolute;
-			top: 2000px;
-			width: 1px;
-			height: 1px;
-			background: transparent;
-			box-shadow: $shadows-small;
-		}
+		@include stars-generator(1px, $shadows-small, 50s, 1000px);
 	}
 
 	.stars2 {
-		width: 2px;
-		height: 2px;
-		background: transparent;
-		box-shadow: $shadows-medium;
-		animation: animStar 100s linear infinite;
-
-		&:after {
-			content: ' ';
-			position: absolute;
-			top: 2000px;
-			width: 2px;
-			height: 2px;
-			background: transparent;
-			box-shadow: $shadows-medium;
-		}
+		@include stars-generator(2px, $shadows-medium, 100s, 1000px);
 	}
 
 	.stars3 {
-		width: 3px;
-		height: 3px;
-		background: transparent;
-		box-shadow: $shadows-big;
-		animation: animStar 150s linear infinite;
+		@include stars-generator(3px, $shadows-big, 150s, 1000px);
+	}
 
-		&:after {
-			content: ' ';
-			position: absolute;
-			top: 2000px;
-			width: 3px;
-			height: 3px;
-			background: transparent;
-			box-shadow: $shadows-big;
+	@media (min-width: 768px) {
+		$shadows-small: multiple-box-shadow(500, 1100, 1000);
+		$shadows-medium: multiple-box-shadow(100, 1100, 1000);
+		$shadows-big: multiple-box-shadow(80, 1100, 1000);
+
+		.stars {
+			@include stars-generator(1px, $shadows-small, 50s, 1000px);
+		}
+
+		.stars2 {
+			@include stars-generator(2px, $shadows-medium, 100s, 1000px);
+		}
+
+		.stars3 {
+			@include stars-generator(3px, $shadows-big, 150s, 1000px);
+		}
+	}
+
+	@media (min-width: 1024px) {
+		$shadows-small: multiple-box-shadow(700, 1600, 1000);
+		$shadows-medium: multiple-box-shadow(180, 1600, 1000);
+		$shadows-big: multiple-box-shadow(100, 1600, 1000);
+
+		.stars {
+			@include stars-generator(1px, $shadows-small, 50s, 1000px);
+		}
+
+		.stars2 {
+			@include stars-generator(2px, $shadows-medium, 100s, 1000px);
+		}
+
+		.stars3 {
+			@include stars-generator(3px, $shadows-big, 150s, 1000px);
+		}
+	}
+
+	@media (min-width: 1536px) {
+		$shadows-small: multiple-box-shadow(800, 3000, 1000);
+		$shadows-medium: multiple-box-shadow(250, 3000, 1000);
+		$shadows-big: multiple-box-shadow(150, 3000, 1000);
+
+		.stars {
+			@include stars-generator(1px, $shadows-small, 50s, 1000px);
+		}
+
+		.stars2 {
+			@include stars-generator(2px, $shadows-medium, 100s, 1000px);
+		}
+
+		.stars3 {
+			@include stars-generator(3px, $shadows-big, 150s, 1000px);
 		}
 	}
 
@@ -165,7 +195,7 @@
 			transform: translateY(0px);
 		}
 		to {
-			transform: translateY(-2000px);
+			transform: translateY(-1000px);
 		}
 	}
 </style>

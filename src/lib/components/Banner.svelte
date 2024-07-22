@@ -38,21 +38,21 @@
 		</p>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.contactBloc.description')}<br />
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 mx-1 font-bold">
+			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 mx-1 font-bold">
 				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
 		<p class="flex items-center pt-4 my-4 gap-3">
-			<OutboundLink href="https://www.linkedin.com/in/jeremy-brochard" class="my-0 w-6">
-				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
+			<OutboundLink href="https://www.linkedin.com/in/jeremy-brochard" class="my-0 w-6 hover:scale-110">
+				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')}/>
 			</OutboundLink>
-			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-6">
+			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-6 hover:scale-110">
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-7">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-7 hover:scale-110">
 				<img src={AycandooIcon} alt={$_('banner.actionsBloc.contact')} />
 			</OutboundLink>
-			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-6">
+			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-6 hover:scale-110">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

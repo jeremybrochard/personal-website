@@ -10,11 +10,11 @@
 		"mainBloc": {
 			"descriptionBegin": "Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant",
 			"aycandooLink": "AYCANDO",
-			"descriptionEnd": ", ma propre société."
+			"descriptionEnd": "."
 		},
 		"contactBloc": {
 			"description": "Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
-			"contactLink": "Prenez contact avec notre équipe AYCANDOO"
+			"contactLink": "Contactez-moi pour que nous puissions échanger"
 		},
 		"actionsBloc": {
 			"linkedIn": "Profil LinkedIn de Jérémy",
@@ -26,7 +26,8 @@
 	},
 	"references": {
 		"title": "Mes références",
-		"description": "Les logos ci-dessous redirigent vers les sites et applications auxquels j'ai participé lorsqu'ils sont publics. Le cas échéant, ces liens redirigent vers les sites publics."
+		"description": "Les logos ci-dessous redirigent vers les sites et applications auxquels j'ai participé lorsqu'ils sont publics.",
+    "linkedIn": "Pour avoir plus d'informations, vous pouvez consulter mon profil"
 	},
   "techStack": {
     "title": "Ma stack technique"

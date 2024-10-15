@@ -4,8 +4,8 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
-<section id="work-references" class="flex flex-col items-center m-auto pt-24 pb-12 px-6 max-w-6xl">
-	<h2 class="my-1 mx-0 text-2xl font-semibold">{$_('references.title')}</h2>
+<section id="work-references" class="flex flex-col items-center m-auto pt-24 pb-12 px-12 max-w-6xl">
+	<h2 class="mt-1 mb-6 mx-0 text-2xl font-semibold">{$_('references.title')}</h2>
 	<p class="text-center leading-6 mx-0 mt-4 mb-12">
 		{$_('references.description')}
 		{$_('references.linkedIn')}

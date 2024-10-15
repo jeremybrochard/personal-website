@@ -10,9 +10,11 @@ import PostgreSQLIcon from '$lib/assets/tech-stack/postgresql-color.svg';
 import SassIcon from '$lib/assets/tech-stack/sass-color.svg';
 import TailwindIcon from '$lib/assets/tech-stack/tailwindcss-color.svg';
 import WebComponentsIcon from '$lib/assets/tech-stack/webcomponentsdotorg-color.svg';
+import BunIcon from '$lib/assets/tech-stack/bun-color.svg';
 import WebpackIcon from '$lib/assets/tech-stack/webpack-color.svg';
 import ESBuildIcon from '$lib/assets/tech-stack/esbuild-color.svg';
 import ViteIcon from '$lib/assets/tech-stack/vite-color.svg';
+import BiomeIcon from '$lib/assets/tech-stack/biome-color.svg';
 import ESLintIcon from '$lib/assets/tech-stack/eslint-color.svg';
 import PrettierIcon from '$lib/assets/tech-stack/prettier-color.svg';
 import VSCodeIcon from '$lib/assets/tech-stack/visualstudiocode-color.svg';
@@ -22,6 +24,8 @@ import BitBucketIcon from '$lib/assets/tech-stack/bitbucket-color.svg';
 import DockerIcon from '$lib/assets/tech-stack/docker-color.svg';
 import AWSIcon from '$lib/assets/tech-stack/amazonwebservices-color.svg';
 import RenderIcon from '$lib/assets/tech-stack/render-color.svg';
+import GoogleCloudIcon from '$lib/assets/tech-stack/googlecloud-color.svg';
+import FirebaseIcon from '$lib/assets/tech-stack/firebase-color.svg';
 
 export const techStackList = [
 	{
@@ -72,6 +76,10 @@ export const techStackList = [
 		name: 'Web Components',
 		image: WebComponentsIcon
 	},
+  {
+		name: 'Bun',
+		image: BunIcon
+	},
 	{
 		name: 'Webpack',
 		image: WebpackIcon
@@ -83,6 +91,10 @@ export const techStackList = [
 	{
 		name: 'Vite',
 		image: ViteIcon
+	},
+  {
+		name: 'Biome',
+		image: BiomeIcon
 	},
 	{
 		name: 'ESLint',
@@ -116,8 +128,16 @@ export const techStackList = [
 		name: 'AWS',
 		image: AWSIcon
 	},
+  {
+		name: 'Google Cloud',
+		image: GoogleCloudIcon
+	},
 	{
 		name: 'Render',
 		image: RenderIcon
+	},
+  {
+		name: 'Firebase',
+		image: FirebaseIcon
 	}
 ];

@@ -6,7 +6,7 @@
 	import SedeVeoliaImg from '$lib/assets/work-references/sede-veolia.png';
 	import SGImg from '$lib/assets/work-references/sg.svg';
 	import VoluntisImg from '$lib/assets/work-references/voluntis.svg';
-	import OutboundLink from './OutboundLink.svelte';
+	import OutboundLink from '../OutboundLink.svelte';
 
 	type ReferenceName =
 		| 'colonna-facility'

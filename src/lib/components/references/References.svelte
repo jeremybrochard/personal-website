@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OutboundLink from './OutboundLink.svelte';
+	import OutboundLink from '../OutboundLink.svelte';
 	import ReferenceElement from './ReferenceElement.svelte';
 	import { _ } from 'svelte-i18n';
 </script>

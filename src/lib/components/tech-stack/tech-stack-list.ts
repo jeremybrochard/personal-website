@@ -26,10 +26,11 @@ import AWSIcon from '$lib/assets/tech-stack/amazonwebservices-color.svg';
 import RenderIcon from '$lib/assets/tech-stack/render-color.svg';
 import GoogleCloudIcon from '$lib/assets/tech-stack/googlecloud-color.svg';
 import FirebaseIcon from '$lib/assets/tech-stack/firebase-color.svg';
+import BrevoIcon from '$lib/assets/tech-stack/brevo-color.svg';
 
 import type { TechStackItem } from '$lib/models/tech-stack-item';
 
-export const techStackList: TechStackItem[] = [
+export const techStackList = [
   {
     name: 'HTML 5',
     image: Html5Icon
@@ -135,15 +136,21 @@ export const techStackList: TechStackItem[] = [
     image: GoogleCloudIcon
   },
   {
+    name: 'Firebase',
+    image: FirebaseIcon
+  },
+  {
     name: 'Render',
     image: RenderIcon
   },
   {
-    name: 'Firebase',
-    image: FirebaseIcon
-  }
-];
+    name: 'Brevo',
+    image: BrevoIcon
+  },
+] as const;
 
-export const getTechStackItems = (nameList: string[]): TechStackItem[] => {
+export type TechName = (typeof techStackList)[number]['name'];
+
+export const getTechStackItems = (nameList: TechName[]): TechStackItem[] => {
   return techStackList.filter(i => nameList.includes(i.name));
 }

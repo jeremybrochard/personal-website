@@ -7,10 +7,11 @@
   Personal website of Jeremy Brochard
 </h1>
 
-This repository contains the source code of the [Jeremy Brochard personal website](https://jeremybrochard.dev).
+This repository contains the source code of [my personal website](https://jeremybrochard.dev).
 
 - Made with [Svelte](https://svelte.dev/)
 - Hosted on [Render](https://render.com/)
+- Tech stack icons from [Simple Icons](https://simpleicons.org/)
 
 ## Start in local
 

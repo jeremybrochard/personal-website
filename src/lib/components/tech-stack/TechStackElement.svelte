@@ -1,15 +1,25 @@
 <script lang="ts">
 	import type { TechStackItem } from '$lib/models/tech-stack-item';
+	import { twMerge } from 'tailwind-merge';
 
 	export let techStackItem: TechStackItem;
+	export let iconStyles = '';
+	export let hasTooltip = true;
+
+	let clazz: string = '';
+	export { clazz as class };
 </script>
 
 {#if techStackItem}
 	<div
-		class="has-tooltip flex justify-center relative my-7 px-2 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 transform duration-300 hover:scale-110"
+		class={twMerge(
+			(hasTooltip ? 'has-tooltip' : '') +
+				' flex justify-center relative my-7 px-2 transform duration-300 hover:scale-110',
+			clazz
+		)}
 	>
 		<span class="tooltip rounded shadow-lg p-1 bg-primary text-white">{techStackItem.name}</span>
-		<img class="h-12" src={techStackItem.image} alt={techStackItem.name} />
+		<img class={twMerge('h-12', iconStyles)} src={techStackItem.image} alt={techStackItem.name} />
 	</div>
 {/if}
 

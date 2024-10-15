@@ -15,18 +15,20 @@ This repository contains the source code of [my personal website](https://jeremy
 
 ## Start in local
 
+The project uses [Bun](https://bun.sh/) as a replacement for NodeJS, but it can also work with NodeJS if needed.
+
 ```bash
 # install project dependencies
-npm install
+bun install
 
 # then start a development server
-npm run dev 
+bun run dev 
 
 # or 
-npm start
+bun start
 
 # you can also start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run dev -- --open
 ```
 
 ## Building
@@ -34,9 +36,9 @@ npm run dev -- --open
 To create a production version of your app:
 
 ```bash
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `bun run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

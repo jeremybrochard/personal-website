@@ -1,34 +1,45 @@
 {
-	"pageTitle": "Jérémy Brochard",
-	"pageTitlePrefix": "Bonjour, je suis",
+  "pageTitle": "Jérémy Brochard",
+  "pageTitlePrefix": "Bonjour, je suis",
   "seo": {
     "description": "Développeur web fullstack, j'ai récemment décidé de me lancer en tant qu'indépendant en créant AYCANDOO, ma propre société. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
     "ogDescription": "Développeur Angular / JS / Full stack"
   },
-	"banner": {
-		"title": "Développeur Angular / JS / Full stack",
-		"mainBloc": {
-			"descriptionBegin": "Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant",
-			"aycandooLink": "AYCANDO",
-			"descriptionEnd": "."
-		},
-		"contactBloc": {
-			"description": "Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
-			"contactLink": "Contactez-moi pour que nous puissions échanger"
-		},
-		"actionsBloc": {
-			"linkedIn": "Profil LinkedIn de Jérémy",
-			"github": "Code source du site sur Github",
-			"contact": "Prise de contact via le formulaire de contact du site AYCANDOO",
+  "banner": {
+    "title": "Développeur Angular / JS / Full stack",
+    "mainBloc": {
+      "descriptionBegin": "Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant",
+      "aycandooLink": "AYCANDO",
+      "descriptionEnd": "."
+    },
+    "contactBloc": {
+      "description": "Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
+      "contactLink": "Contactez-moi pour que nous puissions échanger"
+    },
+    "actionsBloc": {
+      "linkedIn": "Profil LinkedIn de Jérémy",
+      "github": "Code source du site sur Github",
+      "contact": "Prise de contact via le formulaire de contact du site AYCANDOO",
       "mailto": "Envoyer un mail à Jérémy Brochard",
-			"references": "Aller à la section des références"
-		}
-	},
-	"references": {
-		"title": "Mes références",
-		"description": "Les logos ci-dessous redirigent vers les sites et applications auxquels j'ai participé lorsqu'ils sont publics.",
+      "references": "Aller à la section des références"
+    }
+  },
+  "references": {
+    "title": "Mes références",
+    "description": "Les logos ci-dessous redirigent vers les sites et applications auxquels j'ai participé lorsqu'ils sont publics.",
     "linkedIn": "Pour avoir plus d'informations, vous pouvez consulter mon profil"
-	},
+  },
+  "projects": {
+    "title": "Mes projets en cours",
+    "aycandoo": {
+      "title": "AYCANDOO",
+      "description": "Site vitrine d'AYCANDOO, la structure que j'ai fondée pour vendre mes prestations en conseil IT et en développement web. Je réalise des sites web sur mesure ou des missions en développement directement chez les clients."
+    },
+    "findyourpc": {
+      "title": "Find your PC - (BETA en cours)",
+      "description": "Trouvez votre ordinateur idéal avec FindYourPC : cette application innovante vous permet de découvrir des configurations de PC fixes adaptées à vos besoins spécifiques. Grâce à des critères personnalisables, trouvez facilement l'ordinateur de bureau parfait pour vos usages, que ce soit pour le gaming, la bureautique ou des tâches plus exigeantes."
+    }
+  },
   "techStack": {
     "title": "Ma stack technique"
   },
@@ -40,13 +51,13 @@
     "copyright": "2024 AYCANDOO"
   },
   "errors": {
-		"404": {
-			"title": "Page introuvable",
-			"description": "Oops ! La page que vous recherchez n'existe pas ou a été déplacé."
-		},
-		"unknown": {
-			"description": "Oops ! Une erreur inattendue s'est produite."
-		},
-		"goBack": "Retourner sur la page d'accueil"
-	}
+    "404": {
+      "title": "Page introuvable",
+      "description": "Oops ! La page que vous recherchez n'existe pas ou a été déplacé."
+    },
+    "unknown": {
+      "description": "Oops ! Une erreur inattendue s'est produite."
+    },
+    "goBack": "Retourner sur la page d'accueil"
+  }
 }

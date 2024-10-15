@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TechStackItem } from '$lib/models/tech-stack-item';
-	import OutboundLink from './OutboundLink.svelte';
-	import TechStackElement from './tech-stack/TechStackElement.svelte';
+	import OutboundLink from '../OutboundLink.svelte';
+	import TechStackElement from '../tech-stack/TechStackElement.svelte';
 
 	export let title: string;
 	export let url: string;

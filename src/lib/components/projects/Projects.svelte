@@ -3,7 +3,7 @@
 	import ProjectElement from './ProjectElement.svelte';
 	import AycandooImg from '$lib/assets/projects/aycandoo.png';
 	import FindYourPCImg from '$lib/assets/projects/findyourpc.png';
-	import { getTechStackItems } from './tech-stack/tech-stack-list';
+	import { getTechStackItems } from '../tech-stack/tech-stack-list';
 
 	const aycandooTechStack = getTechStackItems([
 		'Gatsby',

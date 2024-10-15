@@ -32,7 +32,7 @@
 			</div>
 		</OutboundLink>
 	</div>
-	<p class="min-h-[144px]">
+	<p class="lg:min-h-[144px]">
 		<slot />
 	</p>
 	<div class="flex flex-wrap">
@@ -45,5 +45,5 @@
 			/>
 		{/each}
 	</div>
-	<img src={image} alt="" />
+	<img src={image} alt="" class="drop-shadow-lg" />
 </div>

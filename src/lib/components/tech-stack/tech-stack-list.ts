@@ -26,118 +26,131 @@ import AWSIcon from '$lib/assets/tech-stack/amazonwebservices-color.svg';
 import RenderIcon from '$lib/assets/tech-stack/render-color.svg';
 import GoogleCloudIcon from '$lib/assets/tech-stack/googlecloud-color.svg';
 import FirebaseIcon from '$lib/assets/tech-stack/firebase-color.svg';
+import BrevoIcon from '$lib/assets/tech-stack/brevo-color.svg';
+
+import type { TechStackItem } from '$lib/models/tech-stack-item';
 
 export const techStackList = [
-	{
-		name: 'HTML 5',
-		image: Html5Icon
-	},
-	{
-		name: 'CSS 3',
-		image: Css3Icon
-	},
-	{
-		name: 'JavaScript',
-		image: JavaScriptIcon
-	},
-	{
-		name: 'TypeScript',
-		image: TypeScriptIcon
-	},
-	{
-		name: 'Angular',
-		image: AngularIcon
-	},
-	{
-		name: 'Svelte',
-		image: SvelteIcon
-	},
-	{
-		name: 'Gatsby',
-		image: GatsbyIcon
-	},
-	{
-		name: 'NodeJS',
-		image: NodeJsIcon
-	},
-	{
-		name: 'PostgreSQL',
-		image: PostgreSQLIcon
-	},
-	{
-		name: 'Sass',
-		image: SassIcon
-	},
-	{
-		name: 'Tailwind CSS',
-		image: TailwindIcon
-	},
-	{
-		name: 'Web Components',
-		image: WebComponentsIcon
-	},
   {
-		name: 'Bun',
-		image: BunIcon
-	},
-	{
-		name: 'Webpack',
-		image: WebpackIcon
-	},
-	{
-		name: 'ESBuild',
-		image: ESBuildIcon
-	},
-	{
-		name: 'Vite',
-		image: ViteIcon
-	},
+    name: 'HTML 5',
+    image: Html5Icon
+  },
   {
-		name: 'Biome',
-		image: BiomeIcon
-	},
-	{
-		name: 'ESLint',
-		image: ESLintIcon
-	},
-	{
-		name: 'Prettier',
-		image: PrettierIcon
-	},
-	{
-		name: 'VSCode',
-		image: VSCodeIcon
-	},
-	{
-		name: 'Git',
-		image: GitIcon
-	},
-	{
-		name: 'GitHub',
-		image: GitHubIcon
-	},
-	{
-		name: 'BitBucket',
-		image: BitBucketIcon
-	},
-	{
-		name: 'Docker',
-		image: DockerIcon
-	},
-	{
-		name: 'AWS',
-		image: AWSIcon
-	},
+    name: 'CSS 3',
+    image: Css3Icon
+  },
   {
-		name: 'Google Cloud',
-		image: GoogleCloudIcon
-	},
-	{
-		name: 'Render',
-		image: RenderIcon
-	},
+    name: 'JavaScript',
+    image: JavaScriptIcon
+  },
   {
-		name: 'Firebase',
-		image: FirebaseIcon
-	}
-];
+    name: 'TypeScript',
+    image: TypeScriptIcon
+  },
+  {
+    name: 'Angular',
+    image: AngularIcon
+  },
+  {
+    name: 'Svelte',
+    image: SvelteIcon
+  },
+  {
+    name: 'Gatsby',
+    image: GatsbyIcon
+  },
+  {
+    name: 'NodeJS',
+    image: NodeJsIcon
+  },
+  {
+    name: 'PostgreSQL',
+    image: PostgreSQLIcon
+  },
+  {
+    name: 'Sass',
+    image: SassIcon
+  },
+  {
+    name: 'Tailwind CSS',
+    image: TailwindIcon
+  },
+  {
+    name: 'Web Components',
+    image: WebComponentsIcon
+  },
+  {
+    name: 'Bun',
+    image: BunIcon
+  },
+  {
+    name: 'Webpack',
+    image: WebpackIcon
+  },
+  {
+    name: 'ESBuild',
+    image: ESBuildIcon
+  },
+  {
+    name: 'Vite',
+    image: ViteIcon
+  },
+  {
+    name: 'Biome',
+    image: BiomeIcon
+  },
+  {
+    name: 'ESLint',
+    image: ESLintIcon
+  },
+  {
+    name: 'Prettier',
+    image: PrettierIcon
+  },
+  {
+    name: 'VSCode',
+    image: VSCodeIcon
+  },
+  {
+    name: 'Git',
+    image: GitIcon
+  },
+  {
+    name: 'GitHub',
+    image: GitHubIcon
+  },
+  {
+    name: 'BitBucket',
+    image: BitBucketIcon
+  },
+  {
+    name: 'Docker',
+    image: DockerIcon
+  },
+  {
+    name: 'AWS',
+    image: AWSIcon
+  },
+  {
+    name: 'Google Cloud',
+    image: GoogleCloudIcon
+  },
+  {
+    name: 'Firebase',
+    image: FirebaseIcon
+  },
+  {
+    name: 'Render',
+    image: RenderIcon
+  },
+  {
+    name: 'Brevo',
+    image: BrevoIcon
+  },
+] as const;
+
+export type TechName = (typeof techStackList)[number]['name'];
+
+export const getTechStackItems = (nameList: TechName[]): TechStackItem[] => {
+  return techStackList.filter(i => nameList.includes(i.name));
+}

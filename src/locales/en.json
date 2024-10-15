@@ -1,44 +1,55 @@
 {
-	"pageTitle": "Jeremy Brochard",
-	"pageTitlePrefix": "Hello, I am",
-	"seo": {
-		"description": "Full-stack web developer, I recently decided to become independent by creating AYCANDOO, my own company. Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
-		"ogDescription": "Angular / JS / Full Stack Developer"
-	},
-	"banner": {
-		"title": "Angular / JS / Full Stack Developer",
-		"mainBloc": {
-			"descriptionBegin": "After spending more than 8 years in IT consulting firms and working on several projects for clients like Société Générale and LexisNexis, I decided to become independent by creating",
-			"aycandooLink": "AYCANDO",
-			"descriptionEnd": "."
-		},
-		"contactBloc": {
-			"description": "Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
-			"contactLink": "Contact me so we can discuss."
-		},
-		"actionsBloc": {
-			"linkedIn": "Jeremy's linkedIn profile",
-			"github": "Source code of the site on Github",
-			"contact": "Get in touch through the contact form on the AYCANDOO website",
+  "pageTitle": "Jeremy Brochard",
+  "pageTitlePrefix": "Hello, I am",
+  "seo": {
+    "description": "Full-stack web developer, I recently decided to become independent by creating AYCANDOO, my own company. Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
+    "ogDescription": "Angular / JS / Full Stack Developer"
+  },
+  "banner": {
+    "title": "Angular / JS / Full Stack Developer",
+    "mainBloc": {
+      "descriptionBegin": "After spending more than 8 years in IT consulting firms and working on several projects for clients like Société Générale and LexisNexis, I decided to become independent by creating",
+      "aycandooLink": "AYCANDO",
+      "descriptionEnd": "."
+    },
+    "contactBloc": {
+      "description": "Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
+      "contactLink": "Contact me so we can discuss."
+    },
+    "actionsBloc": {
+      "linkedIn": "Jeremy's linkedIn profile",
+      "github": "Source code of the site on Github",
+      "contact": "Get in touch through the contact form on the AYCANDOO website",
       "mailto": "Send an email to Jeremy Brochard",
-			"references": "Go to references section"
-		}
-	},
-	"references": {
-		"title": "My references",
-		"description": "The logos below redirect to the sites and applications I participated in when they are public.",
-    "linkedIn": "For more information, you can view my profile on"
-	},
+      "references": "Go to references section"
+    }
+  },
+  "references": {
+    "title": "My references",
+    "description": "You can see below the clients I worked for.",
+    "linkedIn": "For more information, you can look at my profile on"
+  },
+  "projects": {
+    "title": "Currently working on",
+    "aycandoo": {
+      "title": "AYCANDOO",
+      "description": "Showcase site for AYCANDOO, the structure I founded to sell my IT consulting and web development services. I create tailor-made websites or I do development missions directly for clients."
+    },
+    "findyourpc": {
+      "title": "Find your PC - (BETA in progress)",
+      "description": "Find your ideal computer with FindYourPC: this innovative application helps you discover desktop PC configurations tailored to your specific needs. With customizable criteria, easily find the perfect desktop for your usage, whether it's for gaming, office work, or more demanding tasks."
+    }
+  },
   "techStack": {
     "title": "My technical stack"
   },
-	"credits": {
-		"flagIcons": {
-			"linkTitle": "Icons used to represent countries in the language selector",
-			"linkLabel": "Flag icons by Freepik - Flaticon"
-		},
+  "credits": {
+    "flagIcons": {
+      "linkTitle": "Icons used to represent countries in the language selector",
+      "linkLabel": "Flag icons by Freepik - Flaticon"
+    },
     "copyright": "2024 AYCANDOO"
-	},
+  },
   "errors": {
     "404": {
       "title": "Page not found",

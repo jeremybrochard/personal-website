@@ -12,12 +12,12 @@
 <div class="flex flex-col gap-6 my-6">
 	<div class="flex flex-col gap-2">
 		<h3 class="text-xl font-medium">{title}</h3>
-		<OutboundLink href={url} class="text-primary text-sm">
+		<OutboundLink href={url} class="text-sm">
 			<div class="flex items-center gap-2">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 16 16"
-					fill="currentColor"
+					fill="#5C44E4"
 					class="w-4 h-4"
 					role="img"
 				>

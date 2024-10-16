@@ -14,6 +14,6 @@ body {
 
 @layer utilities {
 	.text-gradient {
-		@apply bg-gradient-to-r from-[#5C44E4] via-[#8514F5] via-30% to-[#E90464] to-90% text-transparent bg-clip-text font-extrabold;
+		@apply bg-gradient-to-r from-secondary via-tertiary via-30% to-accentuated to-90% text-transparent bg-clip-text font-extrabold;
 	}
 }

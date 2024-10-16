@@ -6,7 +6,9 @@ export default {
 			colors: {
 				primary: '#383838',
         primary_darker: '#121212',
-				secondary: '#5C44E4'
+				secondary: '#5C44E4',
+        tertiary: '#8514F5',
+        accentuated: '#E90464'
 			},
 			grayscale: {
 				70: '70%'

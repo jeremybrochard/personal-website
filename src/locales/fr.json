@@ -37,7 +37,7 @@
     },
     "findyourpc": {
       "title": "Find your PC - (BETA en cours)",
-      "description": "Trouvez votre ordinateur idéal avec FindYourPC : cette application innovante vous permet de découvrir des configurations de PC fixes adaptées à vos besoins spécifiques. Grâce à des critères personnalisables, trouvez facilement l'ordinateur de bureau parfait pour vos usages, que ce soit pour le gaming, la bureautique ou des tâches plus exigeantes."
+      "description": "Trouvez votre PC idéal avec FindYourPC : cette application innovante vous permet de générer des configurations sur mesure, adaptées à vos besoins, en utilisant des composants neufs ou d'occasion. Grâce à un questionnaire simple et à des critères personnalisables, identifiez facilement le PC fixe parfait, que ce soit pour le gaming, la bureautique ou des tâches plus exigeantes."
     }
   },
   "techStack": {

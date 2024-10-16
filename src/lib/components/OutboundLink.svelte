@@ -10,7 +10,7 @@
 </script>
 
 <a
-	class={twMerge('no-underline text-secondary hover:underline hover:grayscale-70', clazz)}
+	class={twMerge('no-underline text-secondary font-bold hover:underline hover:grayscale-70', clazz)}
 	{href}
 	target="_blank"
 	rel="noopener noreferrer"

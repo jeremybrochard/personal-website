@@ -17,3 +17,15 @@ body {
 		@apply bg-gradient-to-r from-secondary via-tertiary via-30% to-accentuated to-90% text-transparent bg-clip-text font-extrabold;
 	}
 }
+
+.image-link {
+  @apply absolute flex items-center justify-center w-full h-full top-0 left-0 text-transparent;
+  
+  &:hover {
+    @apply text-white bg-primary bg-opacity-70 grayscale-0;
+  }
+
+  &:focus-visible {
+    @apply text-white bg-primary bg-opacity-70 grayscale-0 ring-offset-4 ring-2 ring-black rounded-md;
+  }
+}

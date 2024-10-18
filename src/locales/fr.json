@@ -2,13 +2,13 @@
   "pageTitle": "Jérémy Brochard",
   "pageTitlePrefix": "Bonjour, je suis",
   "seo": {
-    "description": "Développeur web fullstack, j'ai récemment décidé de me lancer en tant qu'indépendant en créant AYCANDOO, ma propre société. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
+    "description": "Développeur fullstack, spécialisé en front-end avec Angular, j'ai travaillé pour des clients tels que Lexis Nexis et la Société Générale. Depuis 2024, je suis freelance chez AYCANDOO. Vous avez une idée ou un projet de site ou d'application web ? Je peux vous accompagner aussi bien dans sa réalisation que sa maintenance.",
     "ogDescription": "Développeur Angular / JS / Full stack"
   },
   "banner": {
     "title": "Développeur Angular / JS / Full stack",
     "mainBloc": {
-      "descriptionBegin": "Après plus de 8 ans passés en SSII et plusieurs missions chez des clients comme la Société Générale ou LexisNexis, j'ai décidé de me lancer en tant qu'indépendant en créant",
+      "descriptionBegin": "Développeur fullstack depuis 2015, spécialisé en front-end avec Angular, j'ai travaillé dans divers secteurs comme le juridique et la santé, pour des clients tels que Lexis Nexis et la Société Générale. Depuis 2024, je suis freelance chez",
       "aycandooLink": "AYCANDO",
       "descriptionEnd": "."
     },

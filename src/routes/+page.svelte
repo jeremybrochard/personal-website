@@ -9,5 +9,5 @@
 <Banner />
 <References />
 <Projects />
-<TechStack />
 <Certifications />
+<TechStack />

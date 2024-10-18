@@ -11,7 +11,7 @@
 	export let actionLabel = '';
 </script>
 
-<div class="max-w-sm px-12 py-6 ring-1 ring-white shadow-2xl flex flex-col items-center gap-6">
+<div class="max-w-sm px-12 py-6 ring-1 ring-white shadow-lg flex flex-col items-center gap-6">
 	{#if logo}
 		<img class="h-11 mb-2" src={logo} alt={title} />
 	{/if}

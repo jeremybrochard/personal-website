@@ -5,7 +5,7 @@
 	import CertificationElement from './CertificationElement.svelte';
 </script>
 
-<section id="certifications" class="flex flex-col items-center m-auto pb-32 px-6 max-w-6xl">
+<section id="certifications" class="flex flex-col items-center m-auto pb-32 px-12 max-w-6xl">
 	<h2 class="mt-1 mb-6 mx-0 text-2xl font-semibold">{$_('certifications.title')}</h2>
 	<div class="flex justify-center">
 		<CertificationElement

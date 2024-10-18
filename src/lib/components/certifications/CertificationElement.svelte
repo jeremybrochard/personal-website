@@ -24,22 +24,8 @@
 	{/if}
 	<p class="text-justify">{description}</p>
 	{#if actionUrl && actionLabel}
-		<OutboundLink href={actionUrl} class="text-primary">
-			<button class="outbound-link-button">{actionLabel}</button>
+		<OutboundLink href={actionUrl} class="button-link hover:no-underline">
+			{actionLabel}
 		</OutboundLink>
 	{/if}
 </div>
-
-<style lang="scss">
-	.outbound-link-button {
-		@apply ring-2 ring-primary px-6 py-2 rounded-lg;
-
-		&:hover {
-			@apply text-white bg-primary;
-		}
-
-		&:focus-visible {
-			@apply ring-white text-white bg-primary;
-		}
-	}
-</style>

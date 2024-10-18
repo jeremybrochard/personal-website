@@ -24,7 +24,7 @@
 	{/if}
 	<p class="text-justify">{description}</p>
 	{#if actionUrl && actionLabel}
-		<OutboundLink href={actionUrl} class="button-link hover:no-underline">
+		<OutboundLink href={actionUrl} class="button-link no-underline">
 			{actionLabel}
 		</OutboundLink>
 	{/if}

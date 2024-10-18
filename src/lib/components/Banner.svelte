@@ -1,7 +1,7 @@
 <script lang="ts">
+	import AycandooIcon from '$lib/assets/aycandoo-color.svg';
 	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
 	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
-	import AycandooIcon from '$lib/assets/aycandoo-color.svg';
 	import { _ } from 'svelte-i18n';
 	import OutboundLink from './OutboundLink.svelte';
 
@@ -32,40 +32,42 @@
 		</h2>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.mainBloc.descriptionBegin')}
-			<OutboundLink href="https://aycandoo.fr/" id="aycandoo"
-				>{$_('banner.mainBloc.aycandooLink')}</OutboundLink
+			<OutboundLink
+				href="https://aycandoo.fr/"
+				id="aycandoo"
+				class="text-white font-normal hover:text-secondary">{$_('banner.mainBloc.aycandooLink')}</OutboundLink
 			>{$_('banner.mainBloc.descriptionEnd')}
 		</p>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.contactBloc.description')}<br />
-			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 mx-1">
+			<OutboundLink
+				href="mailto:contact@jeremybrochard.dev"
+				class="my-0 mx-1 text-white font-normal hover:text-secondary"
+			>
 				{$_('banner.contactBloc.contactLink')}
 			</OutboundLink>.
 		</p>
 		<p class="flex items-center pt-4 my-4 gap-3">
 			<OutboundLink
 				href="https://www.linkedin.com/in/jeremy-brochard"
-				class="my-0 w-6 hover:scale-110"
+				class="my-0 w-7 hover:scale-110"
 			>
 				<img src={LinkedInIcon} alt={$_('banner.actionsBloc.linkedIn')} />
 			</OutboundLink>
-			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-6 hover:scale-110">
+			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-7 hover:scale-110">
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
 			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-7 hover:scale-110">
+			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-8 hover:scale-110">
 				<img src={AycandooIcon} alt={$_('banner.actionsBloc.contact')} />
 			</OutboundLink>
-			<OutboundLink
-				href="mailto:contact@jeremybrochard.dev"
-				class="my-0 w-6 hover:scale-110"
-			>
+			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-7 hover:scale-110">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="2 2 21 20"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="w-6 h-6"
+					class="w-7 h-7"
 					role="img"
 					aria-label={$_('banner.actionsBloc.mailto')}
 				>
@@ -88,7 +90,7 @@
 				viewBox="0 0 24 24"
 				stroke-width="1.5"
 				stroke="currentColor"
-				class="w-8 h-8"
+				class="w-9 h-"
 				role="img"
 				aria-label={$_('banner.actionsBloc.references')}
 			>

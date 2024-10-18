@@ -2,13 +2,13 @@
   "pageTitle": "Jeremy Brochard",
   "pageTitlePrefix": "Hello, I am",
   "seo": {
-    "description": "Full-stack web developer, I recently decided to become independent by creating AYCANDOO, my own company. Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
+    "description": "Fullstack developer, specialized on Angular, I worked for clients such as Lexis Nexis and Société Générale. Since 2024 I work as a freelancer at AYCANDOO. Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
     "ogDescription": "Angular / JS / Full Stack Developer"
   },
   "banner": {
     "title": "Angular / JS / Full Stack Developer",
     "mainBloc": {
-      "descriptionBegin": "After spending more than 8 years in IT consulting firms and working on several projects for clients like Société Générale and LexisNexis, I decided to become independent by creating",
+      "descriptionBegin": "Fullstack developer since 2015, specialized on Angular, I worked in various sectors such as legal and health for clients like Lexis Nexis and Société Générale. Since 2024 I work as a freelancer at",
       "aycandooLink": "AYCANDO",
       "descriptionEnd": "."
     },
@@ -42,6 +42,17 @@
   },
   "techStack": {
     "title": "My technical stack"
+  },
+  "certifications": {
+    "title": "My certifications",
+    "opquast": {
+      "title": "Opquast",
+      "subtitle": "Quality control in web projects (french)",
+      "score": "975 points - EXPERT",
+      "description": "Complete mastery of Web quality rules and associated vocabulary. Sufficient level of expertise to become a referent and trainer on Web quality.",
+      "url": "https://directory.opquast.com/fr/certificat/D8TAY5/",
+      "urlLabel": "Show certificate"
+    }
   },
   "credits": {
     "flagIcons": {

@@ -29,3 +29,15 @@ body {
     @apply text-white bg-primary bg-opacity-70 grayscale-0 ring-offset-4 ring-2 ring-black rounded-md;
   }
 }
+
+.button-link {
+  @apply text-primary ring-2 ring-primary px-6 py-2 rounded-lg;
+
+  &:hover {
+    @apply text-white bg-primary;
+  }
+
+  &:focus-visible {
+    @apply ring-white text-white bg-primary;
+  }
+}

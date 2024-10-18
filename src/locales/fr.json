@@ -43,6 +43,17 @@
   "techStack": {
     "title": "Ma stack technique"
   },
+  "certifications": {
+    "title": "Certifications",
+    "opquast": {
+      "title": "Opquast",
+      "subtitle": "Maîtrise de la Qualité en projet Web",
+      "score": "975 points - EXPERT",
+      "description": "Maîtrise complète des règles qualité Web et du vocabulaire associé. Niveau d’expertise suffisant pour devenir référent et formateur sur la qualité Web.",
+      "url": "https://directory.opquast.com/fr/certificat/D8TAY5/",
+      "urlLabel": "Afficher le certificat"
+    }
+  },
   "credits": {
     "flagIcons": {
       "linkTitle": "Icônes utilisées pour représenter les pays dans le selecteur de langue",

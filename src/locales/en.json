@@ -43,6 +43,17 @@
   "techStack": {
     "title": "My technical stack"
   },
+  "certifications": {
+    "title": "Certifications",
+    "opquast": {
+      "title": "Opquast",
+      "subtitle": "Quality control in web projects (french)",
+      "score": "975 points - EXPERT",
+      "description": "Complete mastery of Web quality rules and associated vocabulary. Sufficient level of expertise to become a referent and trainer on Web quality.",
+      "url": "https://directory.opquast.com/fr/certificat/D8TAY5/",
+      "urlLabel": "Show certificate"
+    }
+  },
   "credits": {
     "flagIcons": {
       "linkTitle": "Icons used to represent countries in the language selector",

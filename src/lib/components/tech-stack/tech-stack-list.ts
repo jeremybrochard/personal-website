@@ -49,7 +49,8 @@ export const techStackList = [
   },
   {
     name: 'Angular',
-    image: AngularIcon
+    image: AngularIcon,
+    labelSize: 'big'
   },
   {
     name: 'Svelte',
@@ -73,11 +74,13 @@ export const techStackList = [
   },
   {
     name: 'Tailwind CSS',
-    image: TailwindIcon
+    image: TailwindIcon,
+    labelSize: 'very-big'
   },
   {
     name: 'Web Components',
-    image: WebComponentsIcon
+    image: WebComponentsIcon,
+    labelSize: 'very-big'
   },
   {
     name: 'Bun',
@@ -133,11 +136,13 @@ export const techStackList = [
   },
   {
     name: 'Google Cloud',
-    image: GoogleCloudIcon
+    image: GoogleCloudIcon,
+    labelSize: 'very-big'
   },
   {
     name: 'Firebase',
-    image: FirebaseIcon
+    image: FirebaseIcon,
+    labelSize: 'big'
   },
   {
     name: 'Render',

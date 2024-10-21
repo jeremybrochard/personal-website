@@ -7,6 +7,20 @@
 	export let url: string;
 	export let image: string;
 	export let techStackList: TechStackItem[] = [];
+
+	const getTooltipStyles = (techStack: TechStackItem) => {
+		const defaultStyles = 'text-sm -bottom-8';
+
+		switch (techStack.labelSize) {
+			case 'big':
+				return `${defaultStyles} -left-4 -right-4`;
+			case 'very-big':
+				return `${defaultStyles} -left-8 -right-8`;
+			case 'normal':
+			default:
+				return `${defaultStyles} -left-2 -right-2`;
+		}
+	};
 </script>
 
 <div class="flex flex-col gap-6 my-6">
@@ -39,9 +53,9 @@
 		{#each techStackList as techStack}
 			<TechStackElement
 				techStackItem={techStack}
-				iconStyles="h-6"
+				iconStyles="h-6 w-6"
+				tooltipStyles={getTooltipStyles(techStack)}
 				class="justify-start my-4"
-				hasTooltip={false}
 			/>
 		{/each}
 	</div>

@@ -82,6 +82,7 @@
 		<a
 			class="no-underline text-accentuated font-bold hover:underline hover:scale-110 mx-1 mt-8 mb-12 md:mt-24"
 			href="#work-references"
+      aria-label={$_('banner.actionsBloc.references')}
 			on:click={smoothAnchorClick}
 		>
 			<svg
@@ -92,7 +93,6 @@
 				stroke="currentColor"
 				class="w-9 h-"
 				role="img"
-				aria-label={$_('banner.actionsBloc.references')}
 			>
 				<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
 			</svg>
@@ -101,6 +101,9 @@
 </section>
 
 <style lang="scss">
+  @use 'sass:math';
+  @use "sass:string";
+
 	@mixin stars-generator($size, $shadows, $speed, $top) {
 		width: $size;
 		height: $size;
@@ -120,12 +123,12 @@
 	}
 
 	@function multiple-box-shadow($n, $x, $y) {
-		$value: '#{random($x)}px #{random($y)}px #FFF';
+		$value: '#{math.random($x)}px #{math.random($y)}px #FFF';
 		@for $i from 2 through $n {
-			$value: '#{$value} , #{random($x)}px #{random($y)}px #FFF';
+			$value: '#{$value} , #{math.random($x)}px #{math.random($y)}px #FFF';
 		}
 
-		@return unquote($value);
+		@return string.unquote($value);
 	}
 
 	$shadows-small: multiple-box-shadow(300, 780, 1000);

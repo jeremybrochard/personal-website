@@ -16,6 +16,7 @@
 	rel="noopener noreferrer"
 	{id}
 	{title}
+  aria-label={title}
 >
 	<slot />
 </a>

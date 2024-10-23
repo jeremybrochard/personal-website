@@ -8,8 +8,8 @@
 		{ image: FranceFlagIcon, locale: `fr` }
 	];
 
-	const updateLocale = (locale: string): void => {
-		$locale = locale;
+	const updateLocale = (newLang: string): void => {
+		locale.set(newLang);
 	};
 </script>
 

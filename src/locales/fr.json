@@ -21,7 +21,9 @@
       "github": "Code source du site sur Github",
       "contact": "Prise de contact via le formulaire de contact du site AYCANDOO",
       "mailto": "Envoyer un mail à Jérémy Brochard",
-      "references": "Aller à la section des références"
+      "references": "Aller à la section des références",
+      "pauseAnimation": "Mettre en pause l'animation",
+      "resumeAnimation": "Redémarer l'animation"
     }
   },
   "references": {

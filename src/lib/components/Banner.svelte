@@ -5,6 +5,11 @@
 	import { _ } from 'svelte-i18n';
 	import OutboundLink from './OutboundLink.svelte';
 
+	let pauseClass = $state('');
+	let starsClass = $derived(pauseClass + 'stars');
+	let stars2Class = $derived(pauseClass + 'stars2');
+	let stars3Class = $derived(pauseClass + 'stars3');
+
 	function smoothAnchorClick(
 		event: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }
 	) {
@@ -16,14 +21,22 @@
 			behavior: 'smooth'
 		});
 	}
+
+	function pauseAnimation() {
+		pauseClass = 'pause ';
+	}
+
+	function resumeAnimation() {
+		pauseClass = '';
+	}
 </script>
 
 <section
-	class="bg-gradient-to-b flex from-primary_darker to-primary to-60% text-white min-h-lvh md:min-h-0"
+	class="bg-gradient-to-b flex flex-col justify-between from-primary_darker to-primary to-60% text-white min-h-lvh md:min-h-0"
 >
-	<div class="stars"></div>
-	<div class="stars2"></div>
-	<div class="stars3"></div>
+	<div class={starsClass}></div>
+	<div class={stars2Class}></div>
+	<div class={stars3Class}></div>
 	<div class="max-w-6xl mx-auto flex self-center flex-col items-center pt-8 pb-0 px-6 md:pt-28">
 		<div>{$_('pageTitlePrefix')}</div>
 		<h1 class="my-1 mx-0 text-gradient text-2xl">{$_('pageTitle')}</h1>
@@ -35,7 +48,8 @@
 			<OutboundLink
 				href="https://aycandoo.fr/"
 				id="aycandoo"
-				class="text-white font-normal hover:text-secondary">{$_('banner.mainBloc.aycandooLink')}</OutboundLink
+				class="text-white font-normal hover:text-secondary"
+				>{$_('banner.mainBloc.aycandooLink')}</OutboundLink
 			>{$_('banner.mainBloc.descriptionEnd')}
 		</p>
 		<p class="leading-6 text-center my-4">
@@ -82,8 +96,8 @@
 		<a
 			class="no-underline text-accentuated font-bold hover:underline hover:scale-110 mx-1 mt-8 mb-12 md:mt-24"
 			href="#work-references"
-      aria-label={$_('banner.actionsBloc.references')}
-			on:click={smoothAnchorClick}
+			aria-label={$_('banner.actionsBloc.references')}
+			onclick={smoothAnchorClick}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -98,11 +112,44 @@
 			</svg>
 		</a>
 	</div>
+	<div class="text-right p-2">
+		{#if pauseClass}
+			<button onclick={resumeAnimation} aria-label={$_('banner.actionsBloc.resumeAnimation')}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					class="h-6 w-6"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
+					/>
+				</svg>
+			</button>
+		{:else}
+			<button onclick={pauseAnimation} aria-label={$_('banner.actionsBloc.pauseAnimation')}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					class="h-6 w-6"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.25-7C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"
+					/>
+				</svg>
+			</button>
+		{/if}
+	</div>
 </section>
 
 <style lang="scss">
-  @use 'sass:math';
-  @use "sass:string";
+	@use 'sass:math';
+	@use 'sass:string';
+
+	.pause {
+		animation-play-state: paused !important;
+	}
 
 	@mixin stars-generator($size, $shadows, $speed, $top) {
 		width: $size;

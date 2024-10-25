@@ -10,6 +10,7 @@
 		'Tailwind CSS',
 		'Prettier',
 		'ESLint',
+    'NodeJS',
 		'Render',
 		'Brevo'
 	]);
@@ -17,6 +18,7 @@
 		'Angular',
 		'Tailwind CSS',
 		'Biome',
+    'NodeJS',
 		'Firebase',
 		'Google Cloud',
 		'Render'

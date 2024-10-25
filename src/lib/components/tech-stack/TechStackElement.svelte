@@ -18,10 +18,17 @@
 		)}
 	>
 		<span
-			class={twMerge('tooltip rounded shadow-lg p-1 bg-primary text-white text-center -bottom-10', tooltipStyles)}
-			>{techStackItem.name}</span
+			class={twMerge(
+				'tooltip rounded shadow-lg p-1 bg-primary text-white text-center -bottom-10',
+				tooltipStyles
+			)}>{techStackItem.name}</span
 		>
-		<img class={twMerge('h-12', iconStyles)} src={techStackItem.image} alt={techStackItem.name} />
+		<img
+			class={twMerge('h-12', iconStyles)}
+			src={techStackItem.image}
+			alt={techStackItem.name}
+			aria-label={techStackItem.name}
+		/>
 	</div>
 {/if}
 

@@ -1,12 +1,17 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { twMerge } from 'tailwind-merge';
 
-	export let id: string | undefined = undefined;
-	export let href: string = '';
-	export let title: string | undefined = undefined;
+	interface Props {
+		id?: string;
+		href: string;
+		title?: string;
+		label?: string;
+		class: string;
+		children?: Snippet;
+	}
 
-	let clazz: string = '';
-	export { clazz as class };
+	let { id, href, title, label, class: clazz = '', children }: Props = $props();
 </script>
 
 <a
@@ -16,7 +21,7 @@
 	rel="noopener noreferrer"
 	{id}
 	{title}
-  aria-label={title}
+	aria-label={label || title}
 >
-	<slot />
+	{@render children?.()}
 </a>

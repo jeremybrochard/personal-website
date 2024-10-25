@@ -114,11 +114,15 @@
 	</div>
 	<div class="text-right p-2">
 		{#if pauseClass}
-			<button onclick={resumeAnimation} aria-label={$_('banner.actionsBloc.resumeAnimation')}>
+			<button
+				onclick={resumeAnimation}
+				aria-label={$_('banner.actionsBloc.resumeAnimation')}
+				class="hover:ring-1 hover:ring-secondary"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="currentColor"
-					class="h-6 w-6"
+					class="my-0 mx-1 h-6 w-6"
 					viewBox="0 0 16 16"
 				>
 					<path
@@ -127,11 +131,15 @@
 				</svg>
 			</button>
 		{:else}
-			<button onclick={pauseAnimation} aria-label={$_('banner.actionsBloc.pauseAnimation')}>
+			<button
+				onclick={pauseAnimation}
+				aria-label={$_('banner.actionsBloc.pauseAnimation')}
+				class="hover:ring-1 hover:ring-secondary"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="currentColor"
-					class="h-6 w-6"
+					class="my-0 mx-1 h-6 w-6"
 					viewBox="0 0 16 16"
 				>
 					<path

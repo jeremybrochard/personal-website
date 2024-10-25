@@ -6,6 +6,7 @@
 	import SedeVeoliaImg from '$lib/assets/work-references/sede-veolia.png';
 	import SGImg from '$lib/assets/work-references/sg.svg';
 	import VoluntisImg from '$lib/assets/work-references/voluntis.svg';
+	import { _ } from 'svelte-i18n';
 	import OutboundLink from '../OutboundLink.svelte';
 
 	type ReferenceName =
@@ -55,10 +56,11 @@
 	class="flex flex-col items-center justify-items-center w-full h-28 md:h-36 md:w-1/2 lg:w-1/3 transform duration-300 hover:scale-110"
 >
 	<OutboundLink
-		href={referenceData[name].website}
+		href={referenceData[name].website!}
 		id="{name}-website"
 		class="transform duration-300 focus-visible:scale-110"
+		label={$_('actions.goTo') + name}
 	>
-		<img class="h-11 mb-2" src={referenceData[name].img} alt="Logo de {name}" />
+		<img class="h-11 mb-2" src={referenceData[name].img} alt="" />
 	</OutboundLink>
 </div>

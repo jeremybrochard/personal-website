@@ -61,14 +61,6 @@ export const techStackList = [
     image: GatsbyIcon
   },
   {
-    name: 'NodeJS',
-    image: NodeJsIcon
-  },
-  {
-    name: 'PostgreSQL',
-    image: PostgreSQLIcon
-  },
-  {
     name: 'Sass',
     image: SassIcon
   },
@@ -109,6 +101,14 @@ export const techStackList = [
   {
     name: 'Prettier',
     image: PrettierIcon
+  },
+  {
+    name: 'NodeJS',
+    image: NodeJsIcon
+  },
+  {
+    name: 'PostgreSQL',
+    image: PostgreSQLIcon
   },
   {
     name: 'VSCode',

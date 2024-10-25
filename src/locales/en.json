@@ -5,6 +5,11 @@
     "description": "Fullstack developer, specialized on Angular, I worked for clients such as Lexis Nexis and Société Générale. Since 2024 I work as a freelancer at AYCANDOO. Do you have an idea or a project for a website or web application? I can assist you both in its development and maintenance.",
     "ogDescription": "Angular / JS / Full Stack Developer"
   },
+  "actions": {
+    "goTo": "Go to the website of ",
+    "translateFr": "Show french version",
+    "translateEn": "Show english version"
+  },
   "banner": {
     "title": "Angular / JS / Full Stack Developer",
     "mainBloc": {

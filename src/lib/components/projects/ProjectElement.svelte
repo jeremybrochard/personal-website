@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { TechStackItem } from '$lib/models/tech-stack-item';
+	import { _ } from 'svelte-i18n';
 	import OutboundLink from '../OutboundLink.svelte';
 	import TechStackElement from '../tech-stack/TechStackElement.svelte';
 
@@ -42,6 +43,7 @@
 						d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
 					/>
 				</svg>
+				<span class="sr-only">{$_('actions.goTo')}<br /></span>
 				{url}
 			</div>
 		</OutboundLink>
@@ -61,7 +63,7 @@
 	</div>
 	<div class="relative">
 		<img src={image} alt="" class="drop-shadow-lg" />
-		<OutboundLink href={url} class="image-link">
+		<OutboundLink href={url} class="image-link" label={$_('actions.goTo') + title}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"

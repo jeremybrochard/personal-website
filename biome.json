@@ -1,0 +1,70 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.11/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!build",
+      "!.svelte-kit",
+      "!package",
+      "!.env",
+      "!.env.*",
+      "!.env.example",
+      "!bun.lock",
+      "!static",
+      "!src/routes/styles.css"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto",
+    "bracketSpacing": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "error"
+      },
+      "style": {
+        "useConst": "warn",
+        "useTemplate": "warn"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "none",
+      "semicolons": "always"
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    }
+  }
+}

@@ -19,6 +19,7 @@ import ReferenceElement from './ReferenceElement.svelte';
 		.
 	</p>
 	<div class="flex flex-row flex-wrap">
+		<ReferenceElement name="energy-one" />
 		<ReferenceElement name="lexisnexis" />
 		<ReferenceElement name="sg" />
 		<ReferenceElement name="sede-veolia" />

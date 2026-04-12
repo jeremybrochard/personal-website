@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LocaleSelector from './LocaleSelector.svelte';
+import LocaleSelector from './LocaleSelector.svelte';
 </script>
 
 <nav class="flex bg-primary_darker h-12 w-full justify-between items-center">

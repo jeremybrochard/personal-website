@@ -1,13 +1,14 @@
 <script lang="ts">
-	import type { TechStackItem } from '$lib/models/tech-stack-item';
-	import { twMerge } from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge';
+import type { TechStackItem } from '$lib/models/tech-stack-item';
 
-	export let techStackItem: TechStackItem;
-	export let iconStyles = '';
-	export let tooltipStyles = '';
+export let techStackItem: TechStackItem;
+export let iconStyles = '';
+export let tooltipStyles = '';
 
-	let clazz: string = '';
-	export { clazz as class };
+let clazz: string = '';
+
+export { clazz as class };
 </script>
 
 {#if techStackItem}

@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
 	--color-primary: #383838;
@@ -12,7 +12,7 @@
 }
 
 body {
-	font-family: 'Ubuntu Sans', Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: "Ubuntu Sans", Arial, "Open Sans", "Helvetica Neue", sans-serif;
 	font-style: normal;
 	color: rgba(0, 0, 0, 0.7);
 	margin: 0;

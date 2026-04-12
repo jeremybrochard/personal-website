@@ -1,27 +1,27 @@
 <script lang="ts">
-	import type { TechStackItem } from '$lib/models/tech-stack-item';
-	import { _ } from 'svelte-i18n';
-	import OutboundLink from '../OutboundLink.svelte';
-	import TechStackElement from '../tech-stack/TechStackElement.svelte';
+import { _ } from 'svelte-i18n';
+import type { TechStackItem } from '$lib/models/tech-stack-item';
+import OutboundLink from '../OutboundLink.svelte';
+import TechStackElement from '../tech-stack/TechStackElement.svelte';
 
-	export let title: string;
-	export let url: string;
-	export let image: string;
-	export let techStackList: TechStackItem[] = [];
+export let title: string;
+export let url: string;
+export let image: string;
+export let techStackList: TechStackItem[] = [];
 
-	const getTooltipStyles = (techStack: TechStackItem) => {
-		const defaultStyles = 'text-sm -bottom-8';
+const getTooltipStyles = (techStack: TechStackItem) => {
+  const defaultStyles = 'text-sm -bottom-8';
 
-		switch (techStack.labelSize) {
-			case 'big':
-				return `${defaultStyles} -left-4 -right-4`;
-			case 'very-big':
-				return `${defaultStyles} -left-8 -right-8`;
-			case 'normal':
-			default:
-				return `${defaultStyles} -left-2 -right-2`;
-		}
-	};
+  switch (techStack.labelSize) {
+    case 'big':
+      return `${defaultStyles} -left-4 -right-4`;
+    case 'very-big':
+      return `${defaultStyles} -left-8 -right-8`;
+    case 'normal':
+    default:
+      return `${defaultStyles} -left-2 -right-2`;
+  }
+};
 </script>
 
 <div class="flex flex-col gap-6 my-6">

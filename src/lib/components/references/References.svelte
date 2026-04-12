@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { _ } from 'svelte-i18n';
-	import OutboundLink from '../OutboundLink.svelte';
-	import ReferenceElement from './ReferenceElement.svelte';
+import { _ } from 'svelte-i18n';
+import OutboundLink from '../OutboundLink.svelte';
+import ReferenceElement from './ReferenceElement.svelte';
 </script>
 
 <section id="work-references" class="flex flex-col items-center m-auto pt-24 pb-12 px-12 max-w-6xl">

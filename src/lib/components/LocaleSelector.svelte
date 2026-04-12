@@ -1,16 +1,16 @@
 <script lang="ts">
-	import FranceFlagIcon from '$lib/assets/country-flags/france.png';
-	import UKFlagIcon from '$lib/assets/country-flags/united-kingdom.png';
-	import { _, locale } from 'svelte-i18n';
+import { _, locale } from 'svelte-i18n';
+import FranceFlagIcon from '$lib/assets/country-flags/france.png';
+import UKFlagIcon from '$lib/assets/country-flags/united-kingdom.png';
 
-	const countryFlags = [
-		{ image: UKFlagIcon, locale: `en`, label: 'actions.translateEn' },
-		{ image: FranceFlagIcon, locale: `fr`, label: 'actions.translateFr' }
-	];
+const countryFlags = [
+  { image: UKFlagIcon, locale: `en`, label: 'actions.translateEn' },
+  { image: FranceFlagIcon, locale: `fr`, label: 'actions.translateFr' }
+];
 
-	const updateLocale = (newLang: string): void => {
-		locale.set(newLang);
-	};
+const updateLocale = (newLang: string): void => {
+  locale.set(newLang);
+};
 </script>
 
 <div class="flex my-0 mx-4">

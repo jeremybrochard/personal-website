@@ -1,17 +1,19 @@
 <script lang="ts">
-import { onMount, onDestroy } from 'svelte';
+import { onDestroy, onMount } from 'svelte';
 import { browser } from '$app/environment';
+import {
+	GRID_SIZE,
+	WIN_VALUE,
+	applyMove,
+	canMove,
+	makeGrid,
+	spawnTile,
+	swipeDirection,
+	tileStyle,
+	KEY_MAP,
+	type Tile,
+} from './game2048.logic';
 
-type Tile = {
-	id: number;
-	value: number;
-	row: number;
-	col: number;
-	isNew: boolean;
-	isMerged: boolean;
-};
-
-const GRID_SIZE = 4;
 let tiles = $state<Tile[]>([]);
 let score = $state(0);
 let bestScore = $state(0);
@@ -19,38 +21,10 @@ let gameOver = $state(false);
 let won = $state(false);
 let keepPlaying = $state(false);
 let tileIdCounter = 0;
-
 let touchStartX = 0;
 let touchStartY = 0;
 
-function createTile(row: number, col: number, value: number): Tile {
-	return { id: tileIdCounter++, value, row, col, isNew: true, isMerged: false };
-}
-
-function getGrid(): (Tile | null)[][] {
-	const grid: (Tile | null)[][] = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(null));
-	for (const tile of tiles) {
-		grid[tile.row][tile.col] = tile;
-	}
-	return grid;
-}
-
-function getEmptyCells(grid: (Tile | null)[][]): [number, number][] {
-	const empty: [number, number][] = [];
-	for (let r = 0; r < GRID_SIZE; r++) {
-		for (let c = 0; c < GRID_SIZE; c++) {
-			if (!grid[r][c]) empty.push([r, c]);
-		}
-	}
-	return empty;
-}
-
-function addRandomTile(grid: (Tile | null)[][]): Tile | null {
-	const empty = getEmptyCells(grid);
-	if (empty.length === 0) return null;
-	const [r, c] = empty[Math.floor(Math.random() * empty.length)];
-	return createTile(r, c, Math.random() < 0.9 ? 2 : 4);
-}
+const nextId = () => tileIdCounter++;
 
 function initGame() {
 	tileIdCounter = 0;
@@ -58,101 +32,40 @@ function initGame() {
 	gameOver = false;
 	won = false;
 	keepPlaying = false;
-	const grid: (Tile | null)[][] = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(null));
-	const t1 = addRandomTile(grid);
-	if (t1) grid[t1.row][t1.col] = t1;
-	const t2 = addRandomTile(grid);
-	if (t2) grid[t2.row][t2.col] = t2;
-	tiles = [t1, t2].filter(Boolean) as Tile[];
 	bestScore = browser ? (parseInt(localStorage.getItem('2048-best') ?? '0') || 0) : 0;
+
+	const grid = makeGrid([]);
+	const t1 = spawnTile(grid, nextId);
+	if (t1) grid[t1.row][t1.col] = t1;
+	const t2 = spawnTile(grid, nextId);
+	tiles = [t1, t2].filter(Boolean) as Tile[];
 }
 
-function move(direction: 'up' | 'down' | 'left' | 'right') {
+function move(direction: Parameters<typeof applyMove>[1]) {
 	if (gameOver || (won && !keepPlaying)) return;
 
-	const grid = getGrid();
-	const newTiles: Tile[] = [];
-	let moved = false;
-	let addedScore = 0;
+	const { tiles: moved, scoreDelta, moved: hasMoved } = applyMove(tiles, direction);
+	if (!hasMoved) return;
 
-	const traverse = direction === 'left' || direction === 'right'
-		? { outerRange: [0, 1, 2, 3], innerRange: direction === 'left' ? [0, 1, 2, 3] : [3, 2, 1, 0], isRow: true }
-		: { outerRange: [0, 1, 2, 3], innerRange: direction === 'up' ? [0, 1, 2, 3] : [3, 2, 1, 0], isRow: false };
-
-	for (const outer of traverse.outerRange) {
-		let insertPos = direction === 'left' || direction === 'up' ? 0 : GRID_SIZE - 1;
-		const step = direction === 'left' || direction === 'up' ? 1 : -1;
-		let lastMerged: Tile | null = null;
-
-		for (const inner of traverse.innerRange) {
-			const [r, c] = traverse.isRow ? [outer, inner] : [inner, outer];
-			const tile = grid[r][c];
-			if (!tile) continue;
-
-			if (lastMerged && lastMerged.value === tile.value) {
-				const newValue = tile.value * 2;
-				addedScore += newValue;
-					const mergedTile: Tile = { ...lastMerged, value: newValue, isMerged: true, isNew: false };
-				newTiles[newTiles.indexOf(lastMerged)] = mergedTile;
-				moved = true;
-				lastMerged = null;
-			} else {
-					const [nr, nc] = traverse.isRow ? [outer, insertPos] : [insertPos, outer];
-				const movedTile: Tile = { ...tile, row: nr, col: nc, isNew: false, isMerged: false };
-				if (tile.row !== nr || tile.col !== nc) moved = true;
-				newTiles.push(movedTile);
-				lastMerged = movedTile;
-				insertPos += step;
-			}
-		}
-	}
-
-	if (!moved) return;
-
-	score += addedScore;
+	score += scoreDelta;
 	if (score > bestScore) {
 		bestScore = score;
-		localStorage.setItem('2048-best', String(bestScore));
+		if (browser) localStorage.setItem('2048-best', String(bestScore));
 	}
 
-	const tempGrid: (Tile | null)[][] = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(null));
-	for (const t of newTiles) tempGrid[t.row][t.col] = t;
+	const newGrid = makeGrid(moved);
+	const spawned = spawnTile(newGrid, nextId);
+	tiles = spawned ? [...moved, spawned] : moved;
 
-	const newTile = addRandomTile(tempGrid);
-	if (newTile) newTiles.push(newTile);
-
-	tiles = newTiles;
-
-	if (!won && newTiles.some(t => t.value === 2048)) {
-		won = true;
-	}
-
-	if (!canMove()) {
-		gameOver = true;
-	}
-}
-
-function canMove(): boolean {
-	const grid = getGrid();
-	for (let r = 0; r < GRID_SIZE; r++) {
-		for (let c = 0; c < GRID_SIZE; c++) {
-			if (!grid[r][c]) return true;
-			const val = grid[r][c]!.value;
-				if (c < GRID_SIZE - 1 && grid[r][c + 1]?.value === val) return true;
-			if (r < GRID_SIZE - 1 && grid[r + 1][c]?.value === val) return true;
-		}
-	}
-	return false;
+	if (!won && tiles.some(t => t.value === WIN_VALUE)) won = true;
+	if (!canMove(makeGrid(tiles))) gameOver = true;
 }
 
 function handleKey(e: KeyboardEvent) {
-	const map: Record<string, 'up' | 'down' | 'left' | 'right'> = {
-		ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right',
-		w: 'up', s: 'down', a: 'left', d: 'right'
-	};
-	if (map[e.key]) {
+	const direction = KEY_MAP[e.key];
+	if (direction) {
 		e.preventDefault();
-		move(map[e.key]);
+		move(direction);
 	}
 }
 
@@ -162,37 +75,11 @@ function handleTouchStart(e: TouchEvent) {
 }
 
 function handleTouchEnd(e: TouchEvent) {
-	const dx = e.changedTouches[0].clientX - touchStartX;
-	const dy = e.changedTouches[0].clientY - touchStartY;
-	const minSwipe = 30;
-	if (Math.abs(dx) < minSwipe && Math.abs(dy) < minSwipe) return;
-	if (Math.abs(dx) > Math.abs(dy)) {
-		move(dx > 0 ? 'right' : 'left');
-	} else {
-		move(dy > 0 ? 'down' : 'up');
-	}
-}
-
-const TILE_COLORS: Record<number, { bg: string; text: string }> = {
-	2:    { bg: '#4a3d6e', text: '#f0e6ff' },
-	4:    { bg: '#5c44e4', text: '#ffffff' },
-	8:    { bg: '#7a2ff0', text: '#ffffff' },
-	16:   { bg: '#8514f5', text: '#ffffff' },
-	32:   { bg: '#a020f0', text: '#ffffff' },
-	64:   { bg: '#c030f8', text: '#ffffff' },
-	128:  { bg: '#e90464', text: '#ffffff' },
-	256:  { bg: '#ff1744', text: '#ffffff' },
-	512:  { bg: '#ff6d00', text: '#ffffff' },
-	1024: { bg: '#ffd600', text: '#1a1a1a' },
-	2048: { bg: '#ffffff', text: '#1a1a1a' },
-};
-
-function tileStyle(tile: Tile): string {
-	const colors = TILE_COLORS[tile.value] ?? { bg: '#ffffff', text: '#1a1a1a' };
-	return [
-		`background: ${colors.bg}`,
-		`color: ${colors.text}`,
-	].join(';');
+	const direction = swipeDirection(
+		e.changedTouches[0].clientX - touchStartX,
+		e.changedTouches[0].clientY - touchStartY,
+	);
+	if (direction) move(direction);
 }
 
 onMount(() => {

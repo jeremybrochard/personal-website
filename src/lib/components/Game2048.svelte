@@ -1,6 +1,7 @@
 <script lang="ts">
 import { onDestroy, onMount } from 'svelte';
 import { browser } from '$app/environment';
+import { _ } from 'svelte-i18n';
 import {
 	GRID_SIZE,
 	WIN_VALUE,
@@ -93,16 +94,16 @@ onDestroy(() => {
 </script>
 
 <section class="flex flex-col items-center py-20 px-6">
-	<h2 class="text-2xl font-semibold mb-2">Mini 2048</h2>
-	<p class="text-primary/60 text-sm mb-6 text-center">Flèches / WASD · Swipe sur mobile</p>
+	<h2 class="text-2xl font-semibold mb-2">{$_('game2048.title')}</h2>
+	<p class="text-primary/60 text-sm mb-6 text-center">{$_('game2048.hint')}</p>
 
 	<dl class="flex gap-4 mb-6">
 		<div class="flex flex-col items-center bg-primary/10 rounded-lg px-4 py-2 min-w-[72px]">
-			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">Score</dt>
+			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">{$_('game2048.score')}</dt>
 			<dd class="font-bold text-xl" aria-live="polite" aria-atomic="true">{score}</dd>
 		</div>
 		<div class="flex flex-col items-center bg-primary/10 rounded-lg px-4 py-2 min-w-[72px]">
-			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">Meilleur</dt>
+			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">{$_('game2048.best')}</dt>
 			<dd class="font-bold text-xl">{bestScore}</dd>
 		</div>
 		<button
@@ -112,13 +113,13 @@ onDestroy(() => {
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4" aria-hidden="true" focusable="false">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
 			</svg>
-			Rejouer
+			{$_('game2048.restart')}
 		</button>
 	</dl>
 
 	<div
 		role="application"
-		aria-label="Grille de jeu 2048"
+		aria-label={$_('game2048.gridLabel')}
 		class="relative select-none touch-none w-[min(340px,90vw)] h-[min(340px,90vw)] bg-primary/[0.07] rounded-xl p-2 grid grid-cols-4 grid-rows-4 gap-2"
 		ontouchstart={handleTouchStart}
 		ontouchend={handleTouchEnd}
@@ -130,7 +131,7 @@ onDestroy(() => {
 		{#each tiles as tile (tile.id)}
 			<div
 				role="img"
-				aria-label="{tile.value} en ligne {tile.row + 1}, colonne {tile.col + 1}"
+				aria-label={$_('game2048.tileLabel', { values: { value: tile.value, row: tile.row + 1, col: tile.col + 1 } })}
 				class="tile absolute rounded-md flex items-center justify-center font-bold z-10"
 				class:tile-new={tile.isNew}
 				class:tile-merged={tile.isMerged}
@@ -149,32 +150,32 @@ onDestroy(() => {
 			<div
 				role="dialog"
 				aria-modal="true"
-				aria-label={won ? 'Victoire' : 'Partie terminée'}
+				aria-label={won ? $_('game2048.overlayWon') : $_('game2048.overlayGameOver')}
 				class="absolute inset-0 rounded-xl bg-white/90 backdrop-blur flex flex-col items-center justify-center z-20"
 			>
 				{#if won}
-					<p class="text-2xl font-bold mb-1"><span aria-hidden="true">🎉</span> 2048 !</p>
-					<p class="text-primary/70 text-sm mb-4">Bien joué !</p>
+					<p class="text-2xl font-bold mb-1"><span aria-hidden="true">🎉</span> {$_('game2048.won')}</p>
+					<p class="text-primary/70 text-sm mb-4">{$_('game2048.wonDescription')}</p>
 					<button
 						onclick={() => { keepPlaying = true; }}
 						class="bg-secondary hover:bg-secondary/80 text-white rounded-lg px-5 py-2 text-sm font-semibold mr-2 transition-colors cursor-pointer"
 					>
-						Continuer
+						{$_('game2048.keepPlaying')}
 					</button>
 					<button
 						onclick={initGame}
 						class="bg-primary/10 hover:bg-primary/20 rounded-lg px-5 py-2 text-sm font-semibold transition-colors cursor-pointer"
 					>
-						Rejouer
+						{$_('game2048.restart')}
 					</button>
 				{:else}
-					<p class="text-2xl font-bold mb-1">Game Over</p>
-					<p class="text-primary/70 text-sm mb-4">Score : {score}</p>
+					<p class="text-2xl font-bold mb-1">{$_('game2048.gameOver')}</p>
+					<p class="text-primary/70 text-sm mb-4">{$_('game2048.gameOverScore', { values: { score } })}</p>
 					<button
 						onclick={initGame}
 						class="bg-secondary hover:bg-secondary/80 text-white rounded-lg px-5 py-2 text-sm font-semibold transition-colors cursor-pointer"
 					>
-						Rejouer
+						{$_('game2048.restart')}
 					</button>
 				{/if}
 			</div>

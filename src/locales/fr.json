@@ -69,6 +69,22 @@
     },
     "copyright": "2024 AYCANDOO"
   },
+  "game2048": {
+    "title": "Mini 2048",
+    "hint": "Flèches / WASD · Swipe sur mobile",
+    "score": "Score",
+    "best": "Meilleur",
+    "restart": "Rejouer",
+    "gridLabel": "Grille de jeu 2048",
+    "tileLabel": "{value} en ligne {row}, colonne {col}",
+    "won": "2048 !",
+    "wonDescription": "Bien joué !",
+    "keepPlaying": "Continuer",
+    "gameOver": "Game Over",
+    "gameOverScore": "Score : {score}",
+    "overlayWon": "Victoire",
+    "overlayGameOver": "Partie terminée"
+  },
   "errors": {
     "404": {
       "title": "Page introuvable",

@@ -217,7 +217,7 @@ describe('swipeDirection', () => {
 describe('tileStyle', () => {
 	test('returns known color for value 2', () => {
 		const style = tileStyle(tile(0, 2, 0, 0));
-		expect(style).toContain('background:#4a3d6e');
+		expect(style).toContain('background:#e8e0f8');
 	});
 
 	test('returns white fallback for unknown value', () => {

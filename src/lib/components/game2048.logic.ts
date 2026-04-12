@@ -118,17 +118,17 @@ export const KEY_MAP: Record<string, Direction> = {
 };
 
 export const TILE_COLORS: Record<number, { bg: string; text: string }> = {
-	2:    { bg: '#4a3d6e', text: '#f0e6ff' },
-	4:    { bg: '#5c44e4', text: '#ffffff' },
-	8:    { bg: '#7a2ff0', text: '#ffffff' },
-	16:   { bg: '#8514f5', text: '#ffffff' },
-	32:   { bg: '#a020f0', text: '#ffffff' },
-	64:   { bg: '#c030f8', text: '#ffffff' },
-	128:  { bg: '#e90464', text: '#ffffff' },
-	256:  { bg: '#ff1744', text: '#ffffff' },
-	512:  { bg: '#ff6d00', text: '#ffffff' },
-	1024: { bg: '#ffd600', text: '#1a1a1a' },
-	2048: { bg: '#ffffff', text: '#1a1a1a' },
+	2:    { bg: '#e8e0f8', text: '#2d1f5e' },
+	4:    { bg: '#c4b0f0', text: '#2d1f5e' },
+	8:    { bg: '#5c44e4', text: '#ffffff' },
+	16:   { bg: '#3d1fbf', text: '#ffffff' },
+	32:   { bg: '#e90464', text: '#ffffff' },
+	64:   { bg: '#b5003e', text: '#ffffff' },
+	128:  { bg: '#ff6d00', text: '#ffffff' },
+	256:  { bg: '#c44e00', text: '#ffffff' },
+	512:  { bg: '#ffd600', text: '#1a1a1a' },
+	1024: { bg: '#f0a800', text: '#1a1a1a' },
+	2048: { bg: '#1a1a1a', text: '#ffffff' },
 };
 
 export function tileStyle(tile: Tile): string {

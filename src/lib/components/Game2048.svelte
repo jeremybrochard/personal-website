@@ -92,18 +92,18 @@ onDestroy(() => {
 });
 </script>
 
-<section class="flex flex-col items-center py-20 px-6 bg-gradient-to-b from-primary_darker to-primary">
-	<h2 class="text-2xl font-semibold text-white mb-2">Mini 2048</h2>
-	<p class="text-white/60 text-sm mb-6 text-center">Flèches / WASD · Swipe sur mobile</p>
+<section class="flex flex-col items-center py-20 px-6">
+	<h2 class="text-2xl font-semibold mb-2">Mini 2048</h2>
+	<p class="text-primary/60 text-sm mb-6 text-center">Flèches / WASD · Swipe sur mobile</p>
 
 	<dl class="flex gap-4 mb-6">
-		<div class="flex flex-col items-center bg-white/10 rounded-lg px-4 py-2 min-w-[72px]">
-			<dt class="text-white/60 text-xs font-semibold uppercase tracking-wider">Score</dt>
-			<dd class="text-white font-bold text-xl" aria-live="polite" aria-atomic="true">{score}</dd>
+		<div class="flex flex-col items-center bg-primary/10 rounded-lg px-4 py-2 min-w-[72px]">
+			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">Score</dt>
+			<dd class="font-bold text-xl" aria-live="polite" aria-atomic="true">{score}</dd>
 		</div>
-		<div class="flex flex-col items-center bg-white/10 rounded-lg px-4 py-2 min-w-[72px]">
-			<dt class="text-white/60 text-xs font-semibold uppercase tracking-wider">Meilleur</dt>
-			<dd class="text-white font-bold text-xl">{bestScore}</dd>
+		<div class="flex flex-col items-center bg-primary/10 rounded-lg px-4 py-2 min-w-[72px]">
+			<dt class="text-primary/60 text-xs font-semibold uppercase tracking-wider">Meilleur</dt>
+			<dd class="font-bold text-xl">{bestScore}</dd>
 		</div>
 		<button
 			onclick={initGame}
@@ -119,12 +119,12 @@ onDestroy(() => {
 	<div
 		role="application"
 		aria-label="Grille de jeu 2048"
-		class="relative select-none touch-none w-[min(340px,90vw)] h-[min(340px,90vw)] bg-white/[0.07] rounded-xl p-2 grid grid-cols-4 grid-rows-4 gap-2"
+		class="relative select-none touch-none w-[min(340px,90vw)] h-[min(340px,90vw)] bg-primary/[0.07] rounded-xl p-2 grid grid-cols-4 grid-rows-4 gap-2"
 		ontouchstart={handleTouchStart}
 		ontouchend={handleTouchEnd}
 	>
 		{#each Array(GRID_SIZE * GRID_SIZE) as _, i}
-			<div class="bg-white/[0.06] rounded-md" aria-hidden="true"></div>
+			<div class="bg-primary/[0.08] rounded-md" aria-hidden="true"></div>
 		{/each}
 
 		{#each tiles as tile (tile.id)}
@@ -150,11 +150,11 @@ onDestroy(() => {
 				role="dialog"
 				aria-modal="true"
 				aria-label={won ? 'Victoire' : 'Partie terminée'}
-				class="absolute inset-0 rounded-xl bg-primary_darker/85 backdrop-blur flex flex-col items-center justify-center z-20"
+				class="absolute inset-0 rounded-xl bg-white/90 backdrop-blur flex flex-col items-center justify-center z-20"
 			>
 				{#if won}
-					<p class="text-2xl font-bold text-white mb-1"><span aria-hidden="true">🎉</span> 2048 !</p>
-					<p class="text-white/80 text-sm mb-4">Bien joué !</p>
+					<p class="text-2xl font-bold mb-1"><span aria-hidden="true">🎉</span> 2048 !</p>
+					<p class="text-primary/70 text-sm mb-4">Bien joué !</p>
 					<button
 						onclick={() => { keepPlaying = true; }}
 						class="bg-secondary hover:bg-secondary/80 text-white rounded-lg px-5 py-2 text-sm font-semibold mr-2 transition-colors cursor-pointer"
@@ -163,13 +163,13 @@ onDestroy(() => {
 					</button>
 					<button
 						onclick={initGame}
-						class="bg-white/20 hover:bg-white/30 text-white rounded-lg px-5 py-2 text-sm font-semibold transition-colors cursor-pointer"
+						class="bg-primary/10 hover:bg-primary/20 rounded-lg px-5 py-2 text-sm font-semibold transition-colors cursor-pointer"
 					>
 						Rejouer
 					</button>
 				{:else}
-					<p class="text-2xl font-bold text-white mb-1">Game Over</p>
-					<p class="text-white/80 text-sm mb-4">Score : {score}</p>
+					<p class="text-2xl font-bold mb-1">Game Over</p>
+					<p class="text-primary/70 text-sm mb-4">Score : {score}</p>
 					<button
 						onclick={initGame}
 						class="bg-secondary hover:bg-secondary/80 text-white rounded-lg px-5 py-2 text-sm font-semibold transition-colors cursor-pointer"

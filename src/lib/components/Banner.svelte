@@ -1,6 +1,5 @@
 <script lang="ts">
 import { _ } from 'svelte-i18n';
-import AycandooIcon from '$lib/assets/aycandoo-color.svg';
 import GithubIcon from '$lib/assets/social-media-icons/github.svg';
 import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
 import OutboundLink from './OutboundLink.svelte';
@@ -42,13 +41,7 @@ function resumeAnimation() {
 			{$_('banner.title')}
 		</h2>
 		<p class="leading-6 text-center my-4">
-			{$_('banner.mainBloc.descriptionBegin')}
-			<OutboundLink
-				href="https://aycandoo.fr/"
-				id="aycandoo"
-				class="text-white font-normal hover:text-secondary"
-				>{$_('banner.mainBloc.aycandooLink')}</OutboundLink
-			>{$_('banner.mainBloc.descriptionEnd')}
+			{$_('banner.mainBloc.description')}
 		</p>
 		<p class="leading-6 text-center my-4">
 			{$_('banner.contactBloc.description')}<br />
@@ -68,9 +61,6 @@ function resumeAnimation() {
 			</OutboundLink>
 			<OutboundLink href="https://github.com/jeremybrochard" class="my-0 w-7 hover:scale-110">
 				<img src={GithubIcon} alt={$_('banner.actionsBloc.github')} />
-			</OutboundLink>
-			<OutboundLink href="https://aycandoo.fr/contact/" class="my-0 w-8 hover:scale-110">
-				<img src={AycandooIcon} alt={$_('banner.actionsBloc.contact')} />
 			</OutboundLink>
 			<OutboundLink href="mailto:contact@jeremybrochard.dev" class="my-0 w-7 hover:scale-110">
 				<svg

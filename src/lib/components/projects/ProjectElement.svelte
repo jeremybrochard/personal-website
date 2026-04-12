@@ -5,7 +5,7 @@ import OutboundLink from '../OutboundLink.svelte';
 import TechStackElement from '../tech-stack/TechStackElement.svelte';
 
 export let title: string;
-export let url: string;
+export let url: string | undefined = undefined;
 export let image: string;
 export let techStackList: TechStackItem[] = [];
 
@@ -24,9 +24,10 @@ const getTooltipStyles = (techStack: TechStackItem) => {
 };
 </script>
 
-<div class="flex flex-col gap-6 my-6">
+<div class="flex flex-col gap-6 my-6 lg:grid lg:grid-rows-subgrid lg:row-span-4 lg:gap-y-6 lg:my-0">
 	<div class="flex flex-col gap-2">
 		<h3 class="text-xl font-medium">{title}</h3>
+		{#if url}
 		<OutboundLink href={url} class="text-sm">
 			<div class="flex items-center gap-2">
 				<svg
@@ -47,8 +48,9 @@ const getTooltipStyles = (techStack: TechStackItem) => {
 				{url}
 			</div>
 		</OutboundLink>
+		{/if}
 	</div>
-	<p class="lg:min-h-[144px]">
+	<p>
 		<slot />
 	</p>
 	<div class="flex flex-wrap">
@@ -63,6 +65,7 @@ const getTooltipStyles = (techStack: TechStackItem) => {
 	</div>
 	<div class="relative">
 		<img src={image} alt="" class="drop-shadow-lg" />
+		{#if url}
 		<OutboundLink href={url} class="image-link" label={$_('actions.goTo') + title}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -80,5 +83,6 @@ const getTooltipStyles = (techStack: TechStackItem) => {
 				/>
 			</svg>
 		</OutboundLink>
+		{/if}
 	</div>
 </div>

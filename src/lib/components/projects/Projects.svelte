@@ -27,12 +27,11 @@ const findYourPCTechStack = getTechStackItems([
 
 <section id="projects" class="flex flex-col items-center m-auto pb-32 px-12 max-w-7xl">
 	<h2 class="mt-1 mb-12 mx-0 text-2xl font-semibold">{$_('projects.title')}</h2>
-	<div class="flex flex-col gap-12 lg:flex-row lg:gap-32">
+	<div class="flex flex-col gap-12 lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto_auto] lg:gap-x-32 lg:items-start">
 		<ProjectElement
 			title={$_('projects.aycandoo.title')}
 			image={AycandooImg}
 			techStackList={aycandooTechStack}
-			url="https://aycandoo.fr"
 		>
 			{$_('projects.aycandoo.description')}
 		</ProjectElement>

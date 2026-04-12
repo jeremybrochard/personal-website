@@ -66,8 +66,23 @@
     "flagIcons": {
       "linkTitle": "Icons used to represent countries in the language selector",
       "linkLabel": "Flag icons by Freepik - Flaticon"
-    },
-    "copyright": "2024 AYCANDOO"
+    }
+  },
+  "game2048": {
+    "title": "Mini 2048",
+    "hint": "Arrows / WASD · Swipe on mobile",
+    "score": "Score",
+    "best": "Best",
+    "restart": "Restart",
+    "gridLabel": "2048 game grid",
+    "tileLabel": "{value} at row {row}, column {col}",
+    "won": "2048!",
+    "wonDescription": "Well done!",
+    "keepPlaying": "Keep playing",
+    "gameOver": "Game Over",
+    "gameOverScore": "Score: {score}",
+    "overlayWon": "Victory",
+    "overlayGameOver": "Game over"
   },
   "errors": {
     "404": {

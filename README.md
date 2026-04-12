@@ -22,9 +22,9 @@ The project uses [Bun](https://bun.sh/) as a replacement for NodeJS, but it can 
 bun install
 
 # then start a development server
-bun run dev 
+bun run dev
 
-# or 
+# or
 bun start
 
 # you can also start the server and open the app in a new browser tab

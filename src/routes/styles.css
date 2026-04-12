@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #383838;
+	--color-primary_darker: #121212;
+	--color-secondary: #5c44e4;
+	--color-tertiary: #8514f5;
+	--color-accentuated: #e90464;
+	--grayscale-70: 70%;
+}
 
 body {
 	font-family: 'Ubuntu Sans', Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -11,32 +18,30 @@ body {
 	margin: 0;
 }
 
-@layer utilities {
-	.text-gradient {
-		@apply bg-gradient-to-r from-secondary via-tertiary via-30% to-accentuated to-90% text-transparent bg-clip-text font-extrabold;
-	}
+@utility text-gradient {
+	@apply bg-gradient-to-r from-secondary via-tertiary via-30% to-accentuated to-90% text-transparent bg-clip-text font-extrabold;
 }
 
 .image-link {
-  @apply absolute flex items-center justify-center w-full h-full top-0 left-0 text-transparent;
-  
-  &:hover {
-    @apply text-white bg-primary bg-opacity-70 grayscale-0;
-  }
+	@apply absolute flex items-center justify-center w-full h-full top-0 left-0 text-transparent;
 
-  &:focus-visible {
-    @apply text-white bg-primary bg-opacity-70 grayscale-0 ring-offset-4 ring-2 ring-black rounded-md;
-  }
+	&:hover {
+		@apply text-white bg-primary/70 grayscale-0;
+	}
+
+	&:focus-visible {
+		@apply text-white bg-primary/70 grayscale-0 ring-offset-4 ring-2 ring-black rounded-md;
+	}
 }
 
 .button-link {
-  @apply text-primary ring-2 ring-primary px-6 py-2 rounded-lg;
+	@apply text-primary ring-2 ring-primary px-6 py-2 rounded-lg;
 
-  &:hover {
-    @apply text-white bg-primary;
-  }
+	&:hover {
+		@apply text-white bg-primary;
+	}
 
-  &:focus-visible {
-    @apply ring-white text-white bg-primary;
-  }
+	&:focus-visible {
+		@apply ring-white text-white bg-primary;
+	}
 }

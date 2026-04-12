@@ -1,17 +1,17 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import { twMerge } from 'tailwind-merge';
+import type { Snippet } from 'svelte';
+import { twMerge } from 'tailwind-merge';
 
-	interface Props {
-		id?: string;
-		href: string;
-		title?: string;
-		label?: string;
-		class: string;
-		children?: Snippet;
-	}
+interface Props {
+  id?: string;
+  href: string;
+  title?: string;
+  label?: string;
+  class: string;
+  children?: Snippet;
+}
 
-	let { id, href, title, label, class: clazz = '', children }: Props = $props();
+let { id, href, title, label, class: clazz = '', children }: Props = $props();
 </script>
 
 <a

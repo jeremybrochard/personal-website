@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { _ } from 'svelte-i18n';
+import { _ } from 'svelte-i18n';
+import { page } from '$app/stores';
 </script>
 
 <section class="flex flex-col items-center gap-4 py-24">

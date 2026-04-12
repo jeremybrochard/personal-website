@@ -1,28 +1,28 @@
 <script lang="ts">
-	import { _ } from 'svelte-i18n';
-	import ProjectElement from './ProjectElement.svelte';
-	import AycandooImg from '$lib/assets/projects/aycandoo.png';
-	import FindYourPCImg from '$lib/assets/projects/findyourpc.png';
-	import { getTechStackItems } from '../tech-stack/tech-stack-list';
+import { _ } from 'svelte-i18n';
+import AycandooImg from '$lib/assets/projects/aycandoo.png';
+import FindYourPCImg from '$lib/assets/projects/findyourpc.png';
+import { getTechStackItems } from '../tech-stack/tech-stack-list';
+import ProjectElement from './ProjectElement.svelte';
 
-	const aycandooTechStack = getTechStackItems([
-		'Gatsby',
-		'Tailwind CSS',
-		'Prettier',
-		'ESLint',
-    'NodeJS',
-		'Render',
-		'Brevo'
-	]);
-	const findYourPCTechStack = getTechStackItems([
-		'Angular',
-		'Tailwind CSS',
-		'Biome',
-    'NodeJS',
-		'Firebase',
-		'Google Cloud',
-		'Render'
-	]);
+const aycandooTechStack = getTechStackItems([
+  'Gatsby',
+  'Tailwind CSS',
+  'Prettier',
+  'ESLint',
+  'NodeJS',
+  'Render',
+  'Brevo'
+]);
+const findYourPCTechStack = getTechStackItems([
+  'Angular',
+  'Tailwind CSS',
+  'Biome',
+  'NodeJS',
+  'Firebase',
+  'Google Cloud',
+  'Render'
+]);
 </script>
 
 <section id="projects" class="flex flex-col items-center m-auto pb-32 px-12 max-w-7xl">

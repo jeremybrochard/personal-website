@@ -1,34 +1,32 @@
 <script lang="ts">
-	import AycandooIcon from '$lib/assets/aycandoo-color.svg';
-	import GithubIcon from '$lib/assets/social-media-icons/github.svg';
-	import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
-	import { _ } from 'svelte-i18n';
-	import OutboundLink from './OutboundLink.svelte';
+import { _ } from 'svelte-i18n';
+import AycandooIcon from '$lib/assets/aycandoo-color.svg';
+import GithubIcon from '$lib/assets/social-media-icons/github.svg';
+import LinkedInIcon from '$lib/assets/social-media-icons/linkedin.svg';
+import OutboundLink from './OutboundLink.svelte';
 
-	let pauseClass = $state('');
-	let starsClass = $derived(pauseClass + 'stars');
-	let stars2Class = $derived(pauseClass + 'stars2');
-	let stars3Class = $derived(pauseClass + 'stars3');
+let pauseClass = $state('');
+let starsClass = $derived(pauseClass + 'stars');
+let stars2Class = $derived(pauseClass + 'stars2');
+let stars3Class = $derived(pauseClass + 'stars3');
 
-	function smoothAnchorClick(
-		event: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }
-	) {
-		event.preventDefault();
-		const anchor = document.getElementById('work-references');
-		if (!anchor) return;
-		window.scrollTo({
-			top: anchor.offsetTop + 60,
-			behavior: 'smooth'
-		});
-	}
+function smoothAnchorClick(event: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }) {
+  event.preventDefault();
+  const anchor = document.getElementById('work-references');
+  if (!anchor) return;
+  window.scrollTo({
+    top: anchor.offsetTop + 60,
+    behavior: 'smooth'
+  });
+}
 
-	function pauseAnimation() {
-		pauseClass = 'pause ';
-	}
+function pauseAnimation() {
+  pauseClass = 'pause ';
+}
 
-	function resumeAnimation() {
-		pauseClass = '';
-	}
+function resumeAnimation() {
+  pauseClass = '';
+}
 </script>
 
 <section

@@ -21,7 +21,7 @@ const config = {
         'font-src': ['self', 'https://fonts.googleapis.com', 'https://fonts.gstatic.com '],
         'img-src': ['self', 'data:'],
         'connect-src': ['https://*.google-analytics.com']
-      },
+      }
     }
   }
 };

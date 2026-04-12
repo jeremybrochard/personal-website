@@ -1,14 +1,14 @@
 <script lang="ts">
-	import OutboundLink from '../OutboundLink.svelte';
+import OutboundLink from '../OutboundLink.svelte';
 
-	export let title: string;
-	export let subtitle: string;
-	export let score = '';
-	export let logo = '';
-	export let badge = '';
-	export let description: string;
-	export let actionUrl = '';
-	export let actionLabel = '';
+export let title: string;
+export let subtitle: string;
+export let score = '';
+export let logo = '';
+export let badge = '';
+export let description: string;
+export let actionUrl = '';
+export let actionLabel = '';
 </script>
 
 <div class="max-w-sm px-12 py-6 ring-1 ring-white shadow-lg flex flex-col items-center gap-6">

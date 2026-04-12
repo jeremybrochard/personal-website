@@ -1,19 +1,19 @@
 <script lang="ts">
-	import type { TechStackItem } from '$lib/models/tech-stack-item';
-	import { _ } from 'svelte-i18n';
-	import { techStackList } from './tech-stack-list';
-	import TechStackElement from './TechStackElement.svelte';
+import { _ } from 'svelte-i18n';
+import type { TechStackItem } from '$lib/models/tech-stack-item';
+import TechStackElement from './TechStackElement.svelte';
+import { techStackList } from './tech-stack-list';
 
-	const getTooltipStyles = (techStack: TechStackItem) => {
-		switch (techStack.labelSize) {
-			case 'very-big':
-				return `-left-4 -right-4`;
-			case 'normal':
-			case 'big':
-			default:
-				return '';
-		}
-	};
+const getTooltipStyles = (techStack: TechStackItem) => {
+  switch (techStack.labelSize) {
+    case 'very-big':
+      return `-left-4 -right-4`;
+    case 'normal':
+    case 'big':
+    default:
+      return '';
+  }
+};
 </script>
 
 <section id="tech-stack" class="flex flex-col items-center m-auto pb-32 px-6 max-w-6xl">

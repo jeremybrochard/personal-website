@@ -1,7 +1,7 @@
 <script>
-	import OutboundLink from './OutboundLink.svelte';
-	import HeartIcon from '$lib/assets/heart-3-fill.svg';
-	import { _ } from 'svelte-i18n';
+import { _ } from 'svelte-i18n';
+import HeartIcon from '$lib/assets/heart-3-fill.svg';
+import OutboundLink from './OutboundLink.svelte';
 </script>
 
 <section class="flex flex-col w-full items-center gap-4 py-6">

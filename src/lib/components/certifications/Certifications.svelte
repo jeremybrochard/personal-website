@@ -1,8 +1,8 @@
 <script lang="ts">
-	import OpquastBadgeImg from '$lib/assets/certifications/opquast-badge.png';
-	import OpquastLogoImg from '$lib/assets/certifications/opquast-logo.svg';
-	import { _ } from 'svelte-i18n';
-	import CertificationElement from './CertificationElement.svelte';
+import { _ } from 'svelte-i18n';
+import OpquastBadgeImg from '$lib/assets/certifications/opquast-badge.png';
+import OpquastLogoImg from '$lib/assets/certifications/opquast-logo.svg';
+import CertificationElement from './CertificationElement.svelte';
 </script>
 
 <section id="certifications" class="flex flex-col items-center m-auto pb-32 px-12 max-w-6xl">

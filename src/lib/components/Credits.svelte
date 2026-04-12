@@ -11,7 +11,6 @@ import OutboundLink from './OutboundLink.svelte';
 			class="text-gradient hover:text-secondary">Svelte</OutboundLink
 		>
 	</p>
-	<p class="text-sm mb-4">&copy; {$_('credits.copyright')}</p>
 	<OutboundLink
 		class="text-primary text-xs font-normal no-underline hover:underline"
 		href="https://www.flaticon.com/packs/rectangular-country-simple-flags"
